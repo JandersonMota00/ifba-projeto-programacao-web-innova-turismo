@@ -1,5 +1,3 @@
-# ifba-projeto-programacao-web-innova-turismo
-
 # IFBA - Programação web
 
 - **Instituição:** IFBA - Instituto Federal da Bahia
