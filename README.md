@@ -22,6 +22,10 @@
       <img src="https://avatars.githubusercontent.com/u/157417082?v=4" width="100px;" alt="Foto do Integrante Saulo"/><br />
       <sub><b><a href="https://github.com/SaulinhoDevs">Saulo Melo</a></b></sub>
     </td>
+    <td align="center">
+      <img src="https://avatars.githubusercontent.com/u/165093325?v=4" width="100px;" alt="Foto do Integrante Vinicius"/><br />
+      <sub><b><a href="https://github.com/SaulinhoDevs">Vinicius Santos</a></b></sub>
+    </td>
   </tr>
 </table>
 
