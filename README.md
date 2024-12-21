@@ -170,7 +170,7 @@ backend/
 │   │   │   │   ├── usuarios/       # Módulo de Usuários
 │   │   │   │   ├── viagens/        # Módulo de Viagens
 │   │   │   ├── Application.java    # Classe principal do Spring Boot
-│   ├── main/resources/
+│   ├── resources/
 │   │   ├── application.properties  # Configurações do Spring Boot
 │   │   ├── db/                     # Scripts de inicialização do banco
 │   │   ├── static/                 # Arquivos estáticos (opcional)
