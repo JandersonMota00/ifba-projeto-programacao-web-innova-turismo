@@ -46,36 +46,36 @@ Para o sistema vocês têm a liberdade de escolher qual domínio de negócio uti
 
 ### Requisitos do Sistema
 
-[ ] Autenticação e Autorização:
+- [ ] Autenticação e Autorização:
 
-  [ ] Implementar sistema de **cadastro de usuários**, incluindo validação de dados:
+  - [ ] Implementar sistema de **cadastro de usuários**, incluindo validação de dados:
     
     O usuário terá pelo menos os campos:
-    [ ] email
-    [ ] nome
-    [ ] senha
+    - [ ] email
+    - [ ] nome
+    - [ ] senha
     - Outros campos podem ser colocados.
     - Usuários cadastrados iniciaram com **status inativo**.
 
-  [ ] Implementar funcionalidade de **login** onde o usuário deverá logar com email e senha.
+  - [ ] Implementar funcionalidade de **login** onde o usuário deverá logar com email e senha.
     - Só usuários ativos poderão logar.
 
-  [ ] Implementar uma tela para o usuário validar o seu login via um código recebido por email.
-    [ ] O link para essa página deverá estar na página de login.
-    [ ] Caso um usuário não ativo tente logar, ele deverá ser redirecionado para essa página de validação.
-    [ ] Nessa página dar a possibilidade de reenvio do código de validação por email.
-    [ ] Permitir ao usuário realizar a **alteração de seus dados pessoais**, como nome, senha e e-mail.
-    [ ] Proteger o acesso às funcionalidades internas do sistema, de modo que apenas usuários logados possam acessar as telas de CRUD das entidades.
+  - [ ] Implementar uma tela para o usuário validar o seu login via um código recebido por email.
+  - [ ] O link para essa página deverá estar na página de login.
+  - [ ] Caso um usuário não ativo tente logar, ele deverá ser redirecionado para essa página de validação.
+  - [ ] Nessa página dar a possibilidade de reenvio do código de validação por email.
+  - [ ] Permitir ao usuário realizar a **alteração de seus dados pessoais**, como nome, senha e e-mail.
+  - [ ] Proteger o acesso às funcionalidades internas do sistema, de modo que apenas usuários logados possam acessar as telas de CRUD das entidades.
   
-  [ ] CRUD das Entidades:
-    [ ] O sistema deverá conter **5 entidades principais**, cada uma com suas respectivas operações de CRUD:
+  - [ ] CRUD das Entidades:
+    - [ ] O sistema deverá conter **5 entidades principais**, cada uma com suas respectivas operações de CRUD:
       - Entidade 1 (exemplo, Produtos).
       - Entidade 2 (exemplo, Categorias).
       - Entidade 3 (exemplo, Pedidos).
       - Entidade 4 (exemplo, Clientes).
       - Entidade 5 (exemplo, Fornecedores).
 
-    [ ] Cada entidade deve ter uma **interface gráfica dedicada** para as operações de CRUD:
+    - [ ] Cada entidade deve ter uma **interface gráfica dedicada** para as operações de CRUD:
       - **Criação de registros** (Create).
       - **Visualização de registros** (Read).
       - **Edição de registros** (Update) (Pode ser usado o mesma tela da criação).
