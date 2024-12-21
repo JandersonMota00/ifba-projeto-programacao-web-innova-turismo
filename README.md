@@ -133,6 +133,7 @@ Será feita uma apresentação no final do semestre, a data ainda será combinad
 agencia-viagens/
 ├── frontend/                  # Frontend do sistema
 ├── backend/                   # Backend do sistema (Spring Boot)
+├── database/                  # Scripts e backups do banco de dados
 ├── docker-compose.yml         # Configuração para subir os serviços (Docker)
 ├── README.md                  # Documentação do projeto
 ```
@@ -174,6 +175,16 @@ backend/
 │   │   ├── application.properties  # Configurações do Spring Boot
 │   │   ├── db/                     # Scripts de inicialização do banco
 │   │   ├── static/                 # Arquivos estáticos (opcional)
-├── Dockerfile                     # Configuração do Docker para o backend
-├── README.md                      # Documentação do backend
+├── Dockerfile                      # Configuração do Docker para o backend
+├── README.md                       # Documentação do backend
+```
+
+### Estrutura do banco de dados
+
+```
+database/                  # Scripts e backups do banco de dados
+├── scripts/               # Scripts SQL de inicialização
+│   ├── schema.sql         # Criação do esquema do banco
+│   ├── data.sql           # Dados iniciais
+├── backups/               # Backups do banco de dados
 ```
