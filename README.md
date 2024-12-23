@@ -35,6 +35,157 @@
   </tr>
 </table>
 
+## Descrição do projeto
+A In Nova Turismo é uma agência de viagens especializada em oferecer pacotes de turismo personalizados para destinos nacionais e internacionais. Este projeto tem como objetivo desenvolver um sistema web completo que permitirá à empresa gerenciar suas operações e oferecer uma experiência de compra online para seus clientes.
+
+O sistema contará com funcionalidades que incluem:
+
+**1. Gestão de pacotes turísticos:**
+
+- Criação, edição e exclusão de pacotes de viagens.
+- Visualização de informações detalhadas, como itinerários, valores e disponibilidade.
+
+**2. Cadastro e gerenciamento de clientes:**
+
+- Registro de informações pessoais dos clientes.
+- Atualização de dados de contato e histórico de compras.
+
+**3. Sistema de autenticação e autorização:**
+
+- Login seguro para os administradores da empresa.
+- Diferenciação de acessos entre administradores e usuário.
+
+**4. Painel administrativo:**
+
+- Controle de estoque de pacotes de viagens.
+- Relatórios e análises de vendas.
+
+**5. E-commerce de viagens:**
+
+- Visualização de pacotes por parte dos clientes.
+- Sistema de busca e filtragem de pacotes por destino, preço e data.
+
+Além disso, o sistema integrará APIs para obter informações como cotação de moedas e clima de destinos, tornando a experiência do usuário mais rica e informativa.
+
+## Requisitos do sistema
+
+### Funcionais:
+
+**1. Gerenciamento de usuários:**
+
+- Cadastro e validação de usuários com status inicial "inativo".
+- Login e recuperação de senha.
+- Atualização de informações pessoais.
+
+**2. Gestão de produtos:**
+
+- CRUD completo para pacotes de viagens e serviços relacionados.
+- Adição de imagens e descrição detalhada para cada pacote.
+
+**3. E-commerce:**
+
+- Página inicial com destaque para pacotes em promoção.
+- Sistema de busca por destino, faixa de preço e datas disponíveis.
+
+**4. Administração:**
+
+- Painel para visualização e gerenciamento de vendas.
+- Relatórios de desempenho.
+
+**5. Integração com APIs externas:**
+
+- Obtenção de dados climáticos para destinos selecionados.
+- Cotação de moedas para pacotes internacionais.
+
+### Não Funcionais:
+
+**1. Usabilidade:**
+
+- Interface responsiva e intuitiva.
+- Design adaptado para dispositivos móveis e desktops.
+
+**2. Segurança:**
+
+- Senhas armazenadas com hashing seguro (e.g., bcrypt).
+- Proteção contra ataques comuns, como SQL Injection e Cross-Site Scripting (XSS).
+
+**3. Performance:**
+
+- Respostas rápidas para operações CRUD.
+- Tempo de carregamento otimizado para a interface do usuário.
+
+**4. Disponibilidade:**
+
+- Suporte a múltiplos usuários simultaneamente.
+- Backup automático do banco de dados.
+
+Este sistema será desenvolvido usando tecnologias modernas, com o backend em Spring Boot e o frontend utilizando HTML, CSS e JavaScript, garantindo robustez e escalabilidade.
+
+## Estrutura do projeto
+
+### Raiz do projeto
+
+```
+agencia-viagens/
+├── frontend/                  # Frontend do sistema
+├── backend/                   # Backend do sistema (Spring Boot)
+├── database/                  # Scripts e backups do banco de dados
+├── docker-compose.yml         # Configuração para subir os serviços (Docker)
+├── README.md                  # Documentação do projeto
+```
+
+### Estrutura do frontend
+
+```
+frontend/
+├── public/                    # Arquivos estáticos (imagens, ícones)
+├── css/                       # Arquivos CSS personalizados
+├── js/                        # Scripts JavaScript (lógica de interação)
+├── pages/                     # Páginas HTML
+│   ├── index.html             # Página inicial
+│   ├── viagens.html           # Página de listagem de viagens
+│   ├── detalhes.html          # Página de detalhes de uma viagem
+│   ├── contato.html           # Página de contato
+├── assets/                    # Imagens, fontes e outros ativos
+├── README.md                  # Documentação do frontend
+```
+
+### Estrutura do backend
+
+```
+backend/
+├── src/
+│   ├── main/
+│   │   ├── java/com/agenciaviagens/
+│   │   │   ├── controller/         # Controladores (Endpoints REST)
+│   │   │   ├── service/            # Lógica de negócios
+│   │   │   ├── repository/         # Repositórios (acesso ao banco)
+│   │   │   ├── model/              # Modelos (entidades JPA)
+│   │   │   ├── dto/                # Transferência de dados
+│   │   │   ├── config/             # Configurações gerais (CORS, segurança)
+│   │   │   ├── module/             # Módulos do sistema
+│   │   │   │   ├── usuarios/       # Módulo de Usuários
+│   │   │   │   ├── viagens/        # Módulo de Viagens
+│   │   │   ├── Application.java    # Classe principal do Spring Boot
+│   ├── resources/
+│   │   ├── application.properties  # Configurações do Spring Boot
+│   │   ├── static/                 # Arquivos estáticos (opcional)
+├── Dockerfile                      # Configuração do Docker para o backend
+├── README.md                       # Documentação do backend
+```
+
+### Estrutura do banco de dados
+
+```
+database/                  # Scripts e backups do banco de dados
+├── scripts/               # Scripts SQL de inicialização
+│   ├── schema.sql         # Criação do esquema do banco
+│   ├── data.sql           # Dados iniciais
+├── backups/               # Backups do banco de dados
+```
+
+---
+
 ## Projeto
 
 ### Descrição do Trabalho: Desenvolvimento de Sistema de Programação Web
@@ -111,74 +262,3 @@ Para o sistema vocês têm a liberdade de escolher qual domínio de negócio uti
 O projeto deverá ser entregue em um repositório do GitHub. O link deverá ser postado no forms https://forms.gle/1eVCXUVJQVT4kYHH7.
 
 Será feita uma apresentação no final do semestre, a data ainda será combinada.
-
-
----
-
-## Descrição do projeto
-
-## Requisitos do sistema
-
-## Estrutura do projeto
-
-### Raiz do projeto
-
-```
-agencia-viagens/
-├── frontend/                  # Frontend do sistema
-├── backend/                   # Backend do sistema (Spring Boot)
-├── database/                  # Scripts e backups do banco de dados
-├── docker-compose.yml         # Configuração para subir os serviços (Docker)
-├── README.md                  # Documentação do projeto
-```
-
-### Estrutura do frontend
-
-```
-frontend/
-├── public/                    # Arquivos estáticos (imagens, ícones)
-├── css/                       # Arquivos CSS personalizados
-├── js/                        # Scripts JavaScript (lógica de interação)
-├── pages/                     # Páginas HTML
-│   ├── index.html             # Página inicial
-│   ├── viagens.html           # Página de listagem de viagens
-│   ├── detalhes.html          # Página de detalhes de uma viagem
-│   ├── contato.html           # Página de contato
-├── assets/                    # Imagens, fontes e outros ativos
-├── README.md                  # Documentação do frontend
-```
-
-### Estrutura do backend
-
-```
-backend/
-├── src/
-│   ├── main/
-│   │   ├── java/com/agenciaviagens/
-│   │   │   ├── controller/         # Controladores (Endpoints REST)
-│   │   │   ├── service/            # Lógica de negócios
-│   │   │   ├── repository/         # Repositórios (acesso ao banco)
-│   │   │   ├── model/              # Modelos (entidades JPA)
-│   │   │   ├── dto/                # Transferência de dados
-│   │   │   ├── config/             # Configurações gerais (CORS, segurança)
-│   │   │   ├── module/             # Módulos do sistema
-│   │   │   │   ├── usuarios/       # Módulo de Usuários
-│   │   │   │   ├── viagens/        # Módulo de Viagens
-│   │   │   ├── Application.java    # Classe principal do Spring Boot
-│   ├── resources/
-│   │   ├── application.properties  # Configurações do Spring Boot
-│   │   ├── db/                     # Scripts de inicialização do banco
-│   │   ├── static/                 # Arquivos estáticos (opcional)
-├── Dockerfile                      # Configuração do Docker para o backend
-├── README.md                       # Documentação do backend
-```
-
-### Estrutura do banco de dados
-
-```
-database/                  # Scripts e backups do banco de dados
-├── scripts/               # Scripts SQL de inicialização
-│   ├── schema.sql         # Criação do esquema do banco
-│   ├── data.sql           # Dados iniciais
-├── backups/               # Backups do banco de dados
-```
