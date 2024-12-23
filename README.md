@@ -156,22 +156,27 @@ frontend/
 backend/
 ├── src/
 │   ├── main/
-│   │   ├── java/com/agenciaviagens/
-│   │   │   ├── controller/         # Controladores (Endpoints REST)
-│   │   │   ├── service/            # Lógica de negócios
-│   │   │   ├── repository/         # Repositórios (acesso ao banco)
-│   │   │   ├── model/              # Modelos (entidades JPA)
-│   │   │   ├── dto/                # Transferência de dados
-│   │   │   ├── config/             # Configurações gerais (CORS, segurança)
-│   │   │   ├── module/             # Módulos do sistema
-│   │   │   │   ├── usuarios/       # Módulo de Usuários
-│   │   │   │   ├── viagens/        # Módulo de Viagens
-│   │   │   ├── Application.java    # Classe principal do Spring Boot
+│   │   ├── java/
+│   │   │   ├── com/agenciaviagens/
+│   │   │   │   ├── controller/         # Controladores (Endpoints REST)
+│   │   │   │   ├── service/            # Lógica de negócios
+│   │   │   │   ├── repository/         # Repositórios (acesso ao banco)
+│   │   │   │   ├── model/              # Modelos (entidades JPA)
+│   │   │   │   ├── dto/                # Transferência de dados
+│   │   │   │   ├── config/             # Configurações gerais (CORS, segurança)
+│   │   │   │   ├── module/             # Módulos do sistema
+│   │   │   │   │   ├── usuarios/       # Módulo de Usuários
+│   │   │   │   │   ├── viagens/        # Módulo de Viagens
+│   │   │   │   │   ├── reservas/       # Módulo de Reservas
+│   │   │   │   ├── Application.java    # Classe principal do Spring Boot
+│   │   ├── jte/                        # Diretório contendo templates JTE (Java Template Engine) usados para gerar páginas HTML de forma dinâmica no backend.
 │   ├── resources/
-│   │   ├── application.properties  # Configurações do Spring Boot
-│   │   ├── static/                 # Arquivos estáticos (opcional)
-├── Dockerfile                      # Configuração do Docker para o backend
-├── README.md                       # Documentação do backend
+│   │   ├── application.properties      # Configurações do Spring Boot
+│   │   ├── static/                     # Arquivos estáticos (opcional)
+├── target/                             # Diretório gerado automaticamente pelo Maven, onde são armazenados os arquivos compilados, JARs ou WARs do projeto.
+├── Dockerfile                          # Configuração do Docker para o backend
+├── pom.xml                             # Arquivo de configuração do Maven, onde são definidos as dependências, plugins, informações do projeto e configurações de build.
+├── README.md                           # Documentação do backend
 ```
 
 ### Estrutura do banco de dados
