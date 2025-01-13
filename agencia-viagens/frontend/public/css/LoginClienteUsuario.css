@@ -1,0 +1,252 @@
+.icon {
+    position: absolute;
+    top: 0px;
+    left: -163px;
+    width: 1035px;
+    height: 900px;
+    object-fit: cover;
+}
+.bem-vindo {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-weight: 500;
+}
+.se-voc-no {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: inline-block;
+    width: 308px;
+}
+.cadastre-se {
+    font-weight: 600;
+    color: #ff432a;
+}
+.clique-no-boto-container {
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    display: inline-block;
+    width: 308px;
+}
+.se-voc-no-tiver-cadastro-parent {
+    position: absolute;
+    top: 67px;
+    left: 0px;
+    width: 308px;
+    height: 54px;
+    font-size: 16px;
+}
+.bem-vindo-parent {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 308px;
+    height: 121px;
+}
+.email {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    font-weight: 500;
+}
+.enter-your-email {
+    position: absolute;
+    top: 48.44%;
+    left: 6.29%;
+    font-size: 16px;
+    font-weight: 200;
+}
+.instance-child {
+    position: absolute;
+    height: 3.13%;
+    width: 100%;
+    top: 96.88%;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
+    background-color: #ff432a;
+}
+.email-parent {
+    position: absolute;
+    top: 0px;
+    left: 1px;
+    width: 429px;
+    height: 64px;
+}
+.user-profile-01 {
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    width: 24px;
+    height: 24px;
+}
+.senha1 {
+    position: absolute;
+    top: 0px;
+    left: 2px;
+    font-weight: 500;
+}
+.todos-os-direitos {
+    position: absolute;
+    top: 342px;
+    left: 96px;
+    font-size: 11px;
+    font-weight: 300;
+}
+.senha-child {
+    position: absolute;
+    top: 62px;
+    left: 2px;
+    background-color: #000;
+    width: 429px;
+    height: 2px;
+}
+.digite-a-sua {
+    position: absolute;
+    top: 0px;
+    left: 25px;
+    font-weight: 200;
+}
+.padlock-1-icon {
+    position: absolute;
+    top: 2px;
+    left: 0px;
+    width: 17px;
+    height: 17px;
+    overflow: hidden;
+}
+.example {
+    position: absolute;
+    top: 31px;
+    left: 0px;
+    width: 171px;
+    height: 24px;
+    font-size: 16px;
+}
+.text-box-icon {
+    position: absolute;
+    top: 39px;
+    left: 417px;
+    width: 14px;
+    height: 14px;
+    overflow: hidden;
+}
+.senha {
+    position: absolute;
+    top: 114px;
+    left: 1px;
+    width: 431px;
+    height: 359px;
+}
+.loginsenha {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 432px;
+    height: 473px;
+}
+.checkbox {
+    position: absolute;
+    top: 3px;
+    left: 0px;
+    background-color: #fff;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    width: 15px;
+    height: 15px;
+}
+.lembre-se-de {
+    position: absolute;
+    top: 0px;
+    left: 25px;
+    font-weight: 300;
+}
+.checkbox-parent {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 136px;
+    height: 18px;
+}
+.esqueceu-a-senha {
+    position: absolute;
+    top: 0px;
+    left: 321px;
+    font-weight: 300;
+}
+.group-container {
+    position: absolute;
+    top: 195px;
+    left: 3px;
+    width: 437px;
+    height: 18px;
+    font-size: 12px;
+}
+.group-child {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.25);
+    border-radius: 32px;
+    background-color: #ff432a;
+    width: 429px;
+    height: 53px;
+}
+.login {
+    position: absolute;
+    top: 14px;
+    left: calc(50% - 22.5px);
+    font-weight: 500;
+}
+.rectangle-parent {
+    position: absolute;
+    top: 273px;
+    left: 3px;
+    width: 429px;
+    height: 53px;
+    font-size: 17px;
+    color: #fff;
+}
+.loginsenha-parent {
+    position: absolute;
+    top: 172px;
+    left: 0px;
+    width: 440px;
+    height: 473px;
+    font-size: 13px;
+}
+.group-parent {
+    position: absolute;
+    top: 133px;
+    left: 932px;
+    width: 440px;
+    height: 645px;
+}
+.design-sem-nome-1 {
+    position: absolute;
+    top: 588px;
+    left: 216.04px;
+    width: 435px;
+    height: 301px;
+    object-fit: cover;
+}
+.login-9 {
+    width: 100%;
+    position: relative;
+    background-color: #fffefc;
+    height: 900px;
+    overflow: hidden;
+    text-align: left;
+    font-size: 30px;
+    color: #000;
+    font-family: Poppins;
+}
+
+
+body {
+    margin: 0;
+    line-height: normal;
+}
+
