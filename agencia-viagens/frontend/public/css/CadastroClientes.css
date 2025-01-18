@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit', sans-serif;
+    background-color: #fdfdfd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+.cadastro-container {
+    background-color: #FCFEFE;
+    width: 90%;
+    max-width: 600px;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    max-width: 200px;
+    height: auto;
+}
+
+.cadastro-form {
+    text-align: center;
+}
+
+.titulo {
+    font-size: 28px;
+    color: #333333;
+    margin-bottom: 25px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 14px;
+    color: #555555;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group input[type="tel"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    color: #333333;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    outline: none;
+    background-color: #FCFEFE;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #e94e1b;
+}
+
+.endereco-section {
+    margin-top: 15px;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+}
+
+.endereco-section .input-group {
+    margin-bottom: 15px;
+}
+
+.endereco-section label {
+    font-size: 13px;
+    color: #444444;
+}
+
+.botao-cadastrar {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #405394;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botao-cadastrar:hover {
+    background-color: #e94e1b;
+}
+
+@media (max-width: 768px) {
+    .cadastro-container {
+        padding: 20px 30px;
+    }
+
+    .titulo {
+        font-size: 24px;
+    }
+
+    .botao-cadastrar {
+        font-size: 14px;
+    }
+}
