@@ -147,6 +147,8 @@ frontend/
 │   ├── detalhes.html          # Página de detalhes de uma viagem
 │   ├── contato.html           # Página de contato
 ├── assets/                    # Imagens, fontes e outros ativos
+│   ├── icons/                 # Ícones que representam ações, elementos ou seções da interface (SVG ou PNG)
+│   ├── backgrounds/           # Imagens de fundo para design ou conteúdo visual
 ├── README.md                  # Documentação do frontend
 ```
 
