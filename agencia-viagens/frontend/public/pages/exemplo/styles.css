@@ -105,10 +105,23 @@
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
+
+  .side-by-side-two {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    width: 100%;
+    justify-content: space-between;
+  }
   
   .form-group {
     margin-bottom: 15px;
-  }  
+    width: 47%;
+  }
+
+  .box-phone {
+    width: 59%;
+  }
   
   label {
     display: block;
