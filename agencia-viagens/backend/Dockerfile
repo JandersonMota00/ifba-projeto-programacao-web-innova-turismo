@@ -1,14 +1,14 @@
-#FROM openjdk:17-jdk-slim
-#WORKDIR /app
-#COPY target/*.jar app.jar
-#ENTRYPOINT ["java", "-jar", "app.jar"]
-
-#FROM openjdk:8-jdk-alpine
-#ARG JAR_FILE=target/*.jar
-#COPY ${JAR_FILE} app.jar
-#ENTRYPOINT [ "java", "-jar", "/app.jar" ]
-
+# Base da imagem com OpenJDK 17 Slim
 FROM openjdk:17-jdk-slim
-ARG JAR_FILE=target/*.jar
+
+# Diretório de trabalho no container
+WORKDIR /app
+
+# Argumento para o arquivo JAR (pode ser passado durante o build)
+ARG JAR_FILE=target/app.jar
+
+# Copia o JAR para o container
 COPY ${JAR_FILE} app.jar
-ENTRYPOINT [ "java", "-jar", "/app.jar" ]
+
+# Configura o ponto de entrada
+ENTRYPOINT ["java", "-jar", "/app/app.jar"]
