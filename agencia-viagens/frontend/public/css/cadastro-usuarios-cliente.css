@@ -1,0 +1,93 @@
+/* Formulário */
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin-top: 8%;
+    gap: 2rem; /* Adicionando espaço entre os elementos */
+}
+
+/* Upload de Foto */
+.photo-upload {
+    width: 40%;
+    height: 86vh;
+    background: #B4C5FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2vw;
+    color: #555;
+    border-radius: 10px;
+    border: 3px solid #87A2FF;
+}
+
+/* Campos do Formulário */
+.form-fields {
+    width: 55%;
+    background: #405394;
+    padding: 3%;
+    border-radius: 15px;
+    border: 3px solid #151F3F;
+    box-shadow: 0px 6px 12px rgba(50, 66, 122, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Adiciona espaço entre os campos */
+}
+
+/* Estilo dos Inputs */
+.form-fields input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1vw;
+    background-color: #F2F5FF;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Botão de Salvar */
+.btn-salvar {
+    width: 40%; /* Reduz o tamanho */
+    padding: 12px; /* Tamanho proporcional */
+    background: #1448E3; /* Azul forte */
+    color: white;
+    font-size: 1vw;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Espaço entre ícone e texto */
+    font-weight: bold;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+    margin: 20px auto 0; /* Centraliza o botão */
+}
+
+/* Ícone dentro do botão */
+.btn-salvar i {
+    font-size: 1vw;
+}
+
+/* Efeito Hover */
+.btn-salvar:hover {
+    background: #0F37A3;
+    transform: scale(1.05);
+}
+
+/* Melhora de visibilidade ao clicar */
+.btn-salvar:active {
+    background: #0B2C87;
+    transform: scale(0.98);
+}
+
+/* Espaço abaixo do botão */
+.form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaço entre os inputs */
+    align-items: center; /* Centraliza o botão */
+}
