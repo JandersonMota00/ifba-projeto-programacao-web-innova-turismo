@@ -1,5 +1,5 @@
 /* Formulário */
-.form-container {
+.formulario-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -9,7 +9,7 @@
 }
 
 /* Upload de Foto */
-.photo-upload {
+.upload-de-foto {
     width: 40%;
     height: 86vh;
     background: #B4C5FF;
@@ -23,7 +23,7 @@
 }
 
 /* Campos do Formulário */
-.form-fields {
+.campos-formulario {
     width: 55%;
     background: #405394;
     padding: 3%;
@@ -36,7 +36,7 @@
 }
 
 /* Estilo dos Inputs */
-.form-fields input {
+.campos-formulario input {
     width: 100%;
     padding: 12px;
     border: none;
@@ -85,7 +85,7 @@
 }
 
 /* Espaço abaixo do botão */
-.form-fields {
+.campos-formulario {
     display: flex;
     flex-direction: column;
     gap: 15px; /* Espaço entre os inputs */
