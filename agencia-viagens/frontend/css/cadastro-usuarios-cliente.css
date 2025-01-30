@@ -1,17 +1,18 @@
 /* Formulário */
 .formulario-container {
-    display: flex;
+    display: block;
     justify-content: space-between;
     align-items: center;
     width: 80%;
-    margin-top: 8%;
+    margin-top: 7.5%;
     gap: 2rem; /* Adicionando espaço entre os elementos */
 }
 
 /* Upload de Foto */
 .upload-de-foto {
-    width: 40%;
-    height: 86vh;
+    margin-bottom: 7.5%;
+    width: 100%;
+    height: 35%;
     background: #B4C5FF;
     display: flex;
     align-items: center;
@@ -24,35 +25,92 @@
 
 /* Campos do Formulário */
 .campos-formulario {
-    width: 55%;
-    background: #405394;
+    width: 100%;
+    background: var(--cor-primaria);
     padding: 3%;
     border-radius: 15px;
-    border: 3px solid #151F3F;
+    /*border: 3px solid #151F3F;*/
     box-shadow: 0px 6px 12px rgba(50, 66, 122, 0.3);
     display: flex;
     flex-direction: column;
     gap: 15px; /* Adiciona espaço entre os campos */
 }
 
+fieldset {
+    gap: 2%;
+}
+
+legend {
+    color: var(--cor-terciaria);
+}
+
+legend, .lado-a-lado {
+    margin-bottom: 2%;
+}
+
+fieldset, .caixa {
+    width: 100%;
+}
+
+.caixa {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.caixa-input {
+    flex-grow: 1;
+    flex-basis: 200px;
+    margin-bottom: 1em;
+}
+
+.lado-a-lado, .lado-mesclado {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.lado-a-lado, .caixa-contato {
+    gap: 3%;
+}
+
+.telefone {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.telefone-selecao {
+    border-left: 1px solid #d6d6d6;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    width: 79%;
+}
+
 /* Estilo dos Inputs */
-.campos-formulario input {
+.input-sem-ponta {
+    border-radius: 8px;
+}
+
+.caixa input, select {
     width: 100%;
     padding: 12px;
     border: none;
-    border-radius: 8px;
-    font-size: 1vw;
-    background-color: #F2F5FF;
-    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+    /*border-radius: 8px;*/
+    font-size: .7em;
+    background-color: var(--cor-secundaria);
+    /*box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);*/
+}
+
+option:hover {
+    background-color: var(--cor-quaternaria);
 }
 
 /* Botão de Salvar */
 .btn-salvar {
-    width: 40%; /* Reduz o tamanho */
+    width: 15em; /* Reduz o tamanho */
     padding: 12px; /* Tamanho proporcional */
-    background: #1448E3; /* Azul forte */
-    color: white;
-    font-size: 1vw;
+    background: var(--cor-primaria);
+    color: var(--cor-terciaria);
+    font-size: 1em;
     border-radius: 8px;
     border: none;
     cursor: pointer;
@@ -74,7 +132,7 @@
 
 /* Efeito Hover */
 .btn-salvar:hover {
-    background: #0F37A3;
+    background: var(--cor-quaternaria);
     transform: scale(1.05);
 }
 

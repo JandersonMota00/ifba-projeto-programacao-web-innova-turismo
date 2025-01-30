@@ -1,75 +1,116 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap">
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/cadastro-usuarios-cliente.css">
-    <link rel="stylesheet" href="../css/styles.css">
-    <title>Cadastro de Clientes</title>
-</head>
-<body>
-    <div class="fundo"></div> <!-- Background Geral -->
-    
-    <div class="container">
-        <!-- Menu Lateral -->
-        <aside class="barra-lateral">
-            <div class="logo">
-                <img src="../assets/logo-innova-tour.png" alt="Innova Turismo">
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#"><img src="../assets/icons/icone-das-hospedagens.svg" class="icone"> Hospedagens</a></li>
-                    <li><a href="#"><img src="../assets/icons/icone-dos-pacotes-de-viagens.svg" class="icone"> Pacote</a></li>
-                    <li><a href="#"><img src="../assets/icons/icone-dos-funcionarios.svg" class="icone"> Funcionários</a></li>
-                    <li><a href="#"><img src="../assets/icons/icone-dos-clientes.svg" class="icone"> Clientes</a></li>
-                </ul>
-            </nav>
-        </aside>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap">
+        <link rel="stylesheet" href="../css/reset.css">
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../css/cadastro-usuarios-cliente.css">
+        <title>Cadastro de Clientes</title>
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <div class="fundo"></div> <!-- Background Geral -->
+        
+        <div class="container">
+            <!-- Menu Lateral -->
+            <aside class="barra-lateral">
+                <div class="logo">
+                    <img src="../assets/logo-innova-tour.png" alt="Innova Turismo">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#"><img src="../assets/icons/icone-das-hospedagens.svg" class="icone"> Hospedagens</a></li>
+                        <li><a href="#"><img src="../assets/icons/icone-dos-pacotes-de-viagens.svg" class="icone"> Pacote</a></li>
+                        <li><a href="#"><img src="../assets/icons/icone-dos-funcionarios.svg" class="icone"> Funcionários</a></li>
+                        <li><a href="#"><img src="../assets/icons/icone-dos-clientes.svg" class="icone"> Clientes</a></li>
+                    </ul>
+                </nav>
+            </aside>
 
-        <!-- Conteúdo Principal -->
-        <main class="conteudo">
-            <!-- Cabeçalho -->
-            <header>
-                <h1>Cadastro de Clientes</h1>
-                <div class="info-usuario">
-                    <img src="../assets/icons/icone-avatar.svg" class="avatar" alt="Avatar">
-                    <div class="detalhes-usuario">
-                        <p>Lorem Ipsum Dolo</p>
-                        <small>Admin</small>
+            <!-- Conteúdo Principal -->
+            <main class="conteudo">
+                <!-- Cabeçalho -->
+                <header>
+                    <h1>Cadastro de Clientes</h1>
+                    <div class="info-usuario">
+                        <img src="../assets/icons/icone-avatar.svg" class="avatar" alt="Avatar">
+                        <div class="detalhes-usuario">
+                            <p>Lorem Ipsum Dolo</p>
+                            <small>Admin</small>
+                        </div>
                     </div>
-                </div>
-            </header>
+                </header>            
+
+                <!-- Formulário -->
+                <section class="formulario-container">
+                    <!-- Área para Foto Expandida -->
+                    <div class="upload-de-foto">
+                        <span>+</span>
+                    </div>
+
+                    <!-- Campos do Formulário -->
+                    <form action="" method="post" class="campos-formulario">
+                        <fieldset>
+                            <legend>Dados Pessoais</legend>
+                            <div class="caixa lado-a-lado">
+                                <div class="caixa-input"><input type="text" placeholder="Nome" class="input-sem-ponta"></div>
+                                <div class="caixa-input"><input type="email" placeholder="E-mail" class="input-sem-ponta"></div>                                
+                            </div>
+                            
+                            <div class="caixa lado-a-lado">
+                                <div class="caixa-input">
+                                    <div class="lado-mesclado">
+                                        <input type="tel" placeholder="Telefone" class="telefone">
+                                        <select name="" id="" class="telefone-selecao">
+                                            <option value="" disabled selected>Selecione...</option>
+                                            <option value="">Phone</option>
+                                            <option value="">Telegram</option>
+                                            <option value="">WhatsApp</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="caixa-input">
+                                    <div class="lado-mesclado">
+                                        <input type="tel" placeholder="Telefone" class="telefone">
+                                        <select name="" id="" class="telefone-selecao">
+                                            <option value="" disabled selected>Selecione...</option>
+                                            <option value="">Phone</option>
+                                            <option value="">Telegram</option>
+                                            <option value="">WhatsApp</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Endereço</legend>
+                            <div class="caixa lado-a-lado">
+                                <div class="caixa-input"><input type="text" placeholder="CEP" class="input-sem-ponta"></div>
+                                <div class="caixa-input"><input type="text" placeholder="Estado" class="input-sem-ponta"></div>
+                                <div class="caixa-input"><input type="text" placeholder="Cidade" class="input-sem-ponta"></div>
+                            </div>
+                            <div class="caixa lado-a-lado">
+                                <div class="caixa-input"><input type="text" placeholder="Bairro" class="input-sem-ponta"></div>
+                                <div class="caixa-input"><input type="text" placeholder="Logradouro" class="input-sem-ponta"></div>
+                                <div class="caixa-input"><input type="text" placeholder="Número" class="input-sem-ponta"></div>
+                            </div>
+                            <div class="caixa">
+                                <div class="caixa-input"><input type="text" placeholder="Complemento" class="input-sem-ponta"></div>
+                            </div>
+                        </fieldset>
+                    </form>
+                
+                    <!-- Botão de Salvar -->
+                    <button class="btn-salvar">💾 Salvar</button>
+                
+                </section>
+            </main>
         </div>
-
-            <!-- Formulário -->
-            <section class="formulario-container">
-                <!-- Área para Foto Expandida -->
-                <div class="upload-de-foto">
-                    <span>+</span>
-                </div>
-
-                <!-- Campos do Formulário -->
-                <div class="campos-formulario">
-                    <input type="text" placeholder="Nome">
-                    <input type="tel" placeholder="Telefone">
-                    <input type="email" placeholder="E-mail">
-                    <input type="tel" placeholder="WhatsApp">
-                    <input type="text" placeholder="CEP">
-                    <input type="text" placeholder="Estado">
-                    <input type="text" placeholder="Cidade">
-                    <input type="text" placeholder="Bairro">
-                    <input type="text" placeholder="Logradouro">
-                    <input type="text" placeholder="Endereço">
-                    <input type="text" placeholder="Número">
-                </div>
-            
-            <!-- Botão de Salvar -->
-            <button class="btn-salvar">💾 Salvar</button>
-            
-            </section>
-        </main>
-    </div>
-</body>
+    </body>
 </html>
