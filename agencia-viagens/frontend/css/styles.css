@@ -104,7 +104,7 @@ header {
 }
 
 h1 {
-    font-size: 2vw;
+    font-size: 1.7em;
 }
 
 /* Informações do Usuário */
@@ -147,4 +147,10 @@ h1 {
     background-position: center;
     background-repeat: repeat;
     z-index: -1;
+}
+
+@media (max-width: 540px) {
+    h1 {
+        font-size: 1em;
+    }
 }
