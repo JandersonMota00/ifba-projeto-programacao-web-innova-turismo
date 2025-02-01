@@ -20,6 +20,15 @@
     width: 100%;
 }
 
+.menu-hamburger {
+    display: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin: 10px;
+    color: var(--cor-primaria);
+}
+
 /* Barra Lateral (Menu) */
 .barra-lateral {
     width: 18%;
@@ -150,7 +159,36 @@ h1 {
 }
 
 @media (max-width: 540px) {
-    h1 {
-        font-size: 1em;
+    .menu-hamburger {
+        position: fixed;
+        top: 1%;
+        left: 0;
+        background-color: var(--cor-terciaria);
+        border: 1px solid var(--cor-secundaria);
+        border-radius: 50%;
+        width: 2.5em;
+        height: 2.5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        z-index: 1001;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .barra-lateral {
+        transform: translateX(-100%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+    }
+
+    .barra-lateral.active {
+        transform: translateX(0);
+    }
+
+    .barra-lateral.show {
+        transform: translateX(0);
     }
 }

@@ -9,7 +9,7 @@ select {
     display: flex;
 }
 
-.formulario-container, .upload-de-fot,
+.formulario-container, .upload-de-foto,
 .campos-formulario, .btn-salvar {
     align-items: center;
 }
@@ -24,6 +24,15 @@ select {
     width: 80%;
     margin-top: 7.5%;
     gap: 2rem;
+}
+
+.menu-hamburger {
+    display: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin: 10px;
+    color: var(--color-second);
 }
 
 /* Upload de Foto */
@@ -130,4 +139,10 @@ legend, .lado-a-lado {
 .btn-salvar:active {
     background: #0B2C87;
     transform: scale(0.98);
+}
+
+@media (max-width: 540px) {    
+    h1 {
+        font-size: 1em;
+    }
 }
