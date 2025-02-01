@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/reset.css">
+        <link rel="stylesheet" href="../css/styles.css">
+        <title>Cadastro de Hospedagem</title>
+    </head>
+    <body>
+        <div class="fundo"></div>
+        
+        <div class="container">
+            <aside class="barra-lateral">
+                <div class="logo">
+                    <img src="../assets/backgrounds/logo-innova-tour.png" alt="Innova Turismo">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#"><img src="../assets/icons/icone-das-hospedagens.svg" class="icone"> Hospedagens</a></li>
+                        <li><a href="#"><img src="../assets/icons/icone-dos-pacotes-de-viagens.svg" class="icone"> Pacotes</a></li>
+                        <li><a href="#"><img src="../assets/icons/icone-dos-funcionarios.svg" class="icone"> Funcionários</a></li>
+                        <li><a href="#"><img src="../assets/icons/icone-dos-clientes.svg" class="icone"> Clientes</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <main class="conteudo">
+                <header>
+                    <h1>Cadastro de Hospedagem</h1>
+                </header>
+                
+                <section class="formulario">
+                    <form action="#" method="POST">
+                        <label for="nome">Nome *</label>
+                        <input type="text" id="nome" name="nome" required>
+                        
+                        <label for="email">E-mail *</label>
+                        <input type="email" id="email" name="email" required>
+                        
+                        <label for="telefone">Telefone *</label>
+                        <input type="tel" id="telefone" name="telefone" required>
+                        
+                        <label for="pais">País *</label>
+                        <input type="text" id="pais" name="pais" required>
+                        
+                        <label for="estado">Estado *</label>
+                        <input type="text" id="estado" name="estado" required>
+                        
+                        <label for="cidade">Cidade *</label>
+                        <input type="text" id="cidade" name="cidade" required>
+                        
+                        <label for="logradouro">Logradouro *</label>
+                        <input type="text" id="logradouro" name="logradouro" required>
+                        
+                        <label for="bairro">Bairro *</label>
+                        <input type="text" id="bairro" name="bairro" required>
+                        
+                        <label for="numero">Número *</label>
+                        <input type="text" id="numero" name="numero" required>
+                        
+                        <button type="submit">Cadastrar</button>
+                    </form>
+                </section>
+            </main>
+        </div>
+    </body>
+</html>

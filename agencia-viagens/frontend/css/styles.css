@@ -14,7 +14,7 @@
 }
 
 /* Layout Principal */
-.container {
+.conteiner {
     display: flex;
     height: 100vh;
     width: 100%;
