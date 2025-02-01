@@ -1,44 +1,57 @@
+.upload-de-foto, .campos-formulario, fieldset,
+.caixa, .lado-a-lado, .lado-mesclado, .caixa input,
+select {
+    width: 100%;
+}
+
+.campos-formulario, .caixa, .lado-a-lado,
+.lado-mesclado, .btn-salvar {
+    display: flex;
+}
+
+.formulario-container, .upload-de-fot,
+.campos-formulario, .btn-salvar {
+    align-items: center;
+}
+
+.upload-de-foto, .btn-salvar {
+    justify-content: center;
+}
+
 /* Formulário */
 .formulario-container {
     display: block;
-    justify-content: space-between;
-    align-items: center;
     width: 80%;
     margin-top: 7.5%;
-    gap: 2rem; /* Adicionando espaço entre os elementos */
+    gap: 2rem;
 }
 
 /* Upload de Foto */
 .upload-de-foto {
     margin-bottom: 7.5%;
-    width: 100%;
     height: 35%;
     background: #B4C5FF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-size: 2vw;
     color: #555;
     border-radius: 10px;
     border: 3px solid #87A2FF;
 }
 
-/* Campos do Formulário */
 .campos-formulario {
-    width: 100%;
     background: var(--cor-primaria);
     padding: 3%;
     border-radius: 15px;
-    /*border: 3px solid #151F3F;*/
     box-shadow: 0px 6px 12px rgba(50, 66, 122, 0.3);
-    display: flex;
     flex-direction: column;
-    gap: 15px; /* Adiciona espaço entre os campos */
-    align-items: center; /* Centraliza o botão */
+    gap: 15px;
 }
 
 fieldset {
     gap: 2%;
+}
+
+.caixa {
+    flex-wrap: wrap;
 }
 
 legend {
@@ -49,25 +62,8 @@ legend, .lado-a-lado {
     margin-bottom: 2%;
 }
 
-fieldset, .caixa {
-    width: 100%;
-}
-
-.caixa {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.caixa-input {
-    flex-grow: 1;
-    flex-basis: 200px;
-    margin-bottom: 1em;
-}
-
 .lado-a-lado, .lado-mesclado {
-    display: flex;
     justify-content: space-between;
-    width: 100%;
 }
 
 .lado-a-lado, .caixa-contato {
@@ -86,26 +82,22 @@ fieldset, .caixa {
     width: 79%;
 }
 
-/* Estilo dos Inputs */
+.caixa-input {
+    flex-grow: 1;
+    flex-basis: 200px;
+    margin-bottom: 1em;
+}
+
 .input-sem-ponta {
     border-radius: 8px;
 }
 
 .caixa input, select {
-    width: 100%;
     padding: 12px;
     border: none;
-    /*border-radius: 8px;*/
-    font-size: .7em;
     background-color: var(--cor-secundaria);
-    /*box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);*/
 }
 
-option:hover {
-    background-color: var(--cor-quaternaria);
-}
-
-/* Botão de Salvar */
 .btn-salvar {
     width: 15em; /* Reduz o tamanho */
     padding: 12px; /* Tamanho proporcional */
@@ -116,9 +108,6 @@ option:hover {
     border: none;
     cursor: pointer;
     text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     gap: 8px; /* Espaço entre ícone e texto */
     font-weight: bold;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
