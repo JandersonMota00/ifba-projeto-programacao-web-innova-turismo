@@ -1,5 +1,5 @@
 /* Formulário */
-.formulario-container {
+.formulario-conteiner {
     display: block;
     justify-content: space-between;
     align-items: center;
@@ -9,7 +9,7 @@
 }
 
 /* Upload de Foto */
-.upload-de-foto {
+.envio-de-foto {
     margin-bottom: 7.5%;
     width: 100%;
     height: 35%;
