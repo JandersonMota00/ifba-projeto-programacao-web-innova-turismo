@@ -14,7 +14,7 @@
 }
 
 /* Layout Principal */
-.conteiner {
+.container {
     display: flex;
     flex-direction: row; /*mantém os itens na horizontal*/
     height: 100vh;
@@ -99,12 +99,16 @@
 /* Conteúdo Principal */
 .conteudo {
     flex: 1;
-    padding-left: 20vw;
-    padding-top: 5vh;
+    margin-left: 18vw;
+    padding-top: 10vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: padding 0.3 ease-in-out;
+    transition: margin 0.3s ease-in-out;
+    justify-content: flex-start;
+    width: calc(100vw - 18vw);
+    height: calc(100vh - 10vh);
+    overflow-y: auto;
 }
 
 /* Cabeçalho */
@@ -112,16 +116,16 @@ header {
     background-color: var(--cor-primaria);
     color: var(--cor-terciaria);
     padding: 1.5%;
-    width: calc(100vw - 18vw); /*o Calc serve para ver a expressão e retornar um parametro simples para uma propriedade CSS*/
+    width: calc(100% - 18vw); /*o Calc serve para ver a expressão e retornar um parametro simples para uma propriedade CSS*/
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: fixed;
     top: 0;
-    left: 0;
+    left: 18vw;
     height: 10vh;
     transition: left 0.3s ease-in-out;
-    margin-left: 18vw;
+    z-index: 1000;
 }
 
 h1 {
@@ -192,9 +196,9 @@ h1 {
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
-    .header{
+    header{
         width: 100vw;
-        margin-left: 0;
+        left: 0;
     }
 }
 
@@ -236,13 +240,18 @@ h1 {
         transform: translateX(0);
     }
 
-    .header{
+    header{
         width: 100vw;
         margin-left: 0;
     }
 
-    .conteiner{
+    .container{
         flex-direction: column;
+    }
+
+    .conteudo{
+        margin-left: 0;
+        width: 100vw;
     }
     
 }
