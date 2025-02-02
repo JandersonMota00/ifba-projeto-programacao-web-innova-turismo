@@ -33,7 +33,6 @@
 /* Barra Lateral (Menu) */
 .barra-lateral {
     width: 18vw;
-    min-width: 15rem;
     background-color: var(--cor-secundaria);
     padding: 2vw;
     box-shadow: 4px 0 10px rgba(122, 122, 122, 0.25);
