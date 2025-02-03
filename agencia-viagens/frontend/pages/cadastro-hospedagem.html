@@ -7,6 +7,35 @@
         <link rel="stylesheet" href="../css/styles.css">
         <link rel="stylesheet" href="../css/cadastro-hospedagem.css">
         <title>Cadastro de Hospedagem</title>
+
+        <script>
+            function formatarTelefone(input) {
+                console.log("Formatando telefone: ", input.value);
+                let value = input.value.replace(/\D/g, "");
+                if (value.length > 10) {
+                    input.value = `(${value.slice(0,2)}) ${value.slice(2,7)}-${value.slice(7,11)}`;
+                } else if (value.length > 6) {
+                    input.value = `(${value.slice(0,2)}) ${value.slice(2,6)}-${value.slice(6)}`;
+                } else if (value.length > 2) {
+                    input.value = `(${value.slice(0,2)}) ${value.slice(2)}`;
+                } else if (value.length > 0) {
+                    input.value = `(${value}`;
+                }
+                console.log("Telefone formatado: ", input.value);
+            }
+            document.addEventListener("DOMContentLoaded", function() {
+                console.log("Página carregada");
+                document.getElementById("pais").addEventListener("change", function() {
+                    console.log("País selecionado: ", this.value);
+                });
+                document.getElementById("estado").addEventListener("change", function() {
+                    console.log("Estado selecionado: ", this.value);
+                });
+                document.getElementById("cidade").addEventListener("change", function() {
+                    console.log("Cidade selecionada: ", this.value);
+                });
+            });
+        </script>
     </head>
     <body>
         <div class="fundo"></div>
@@ -31,8 +60,8 @@
                     <h1>Cadastro de Hospedagem</h1>
                 </header>
                 
-                <section class="formulario">
-                    <form action="#" method="POST">
+                <section class="formulario formulario-conteiner">
+                    <form class="campos-formulario" action="#" method="POST">
                         <label for="nome">Nome *</label>
                         <input type="text" id="nome" name="nome" required>
                         
@@ -40,16 +69,26 @@
                         <input type="email" id="email" name="email" required>
                         
                         <label for="telefone">Telefone *</label>
-                        <input type="tel" id="telefone" name="telefone" required>
+                        <input type="tel" id="telefone" name="telefone" oninput="formatarTelefone(this)" maxlength="15" required>
                         
-                        <label for="pais">País *</label>
-                        <input type="text" id="pais" name="pais" required>
+                        <div class="select-container">
+                            <label for="pais">País *</label>
+                            <select id="pais" name="pais" required>
+                                <option value="">Selecione um país</option>
+                                <option value="br">Brasil</option>
+                                <option value="us">Estados Unidos</option>
+                            </select>
                         
-                        <label for="estado">Estado *</label>
-                        <input type="text" id="estado" name="estado" required>
+                            <label for="estado">Estado *</label>
+                            <select id="estado" name="estado" required>
+                                <option value="">Selecione um estado</option>
+                            </select>
                         
-                        <label for="cidade">Cidade *</label>
-                        <input type="text" id="cidade" name="cidade" required>
+                            <label for="cidade">Cidade *</label>
+                            <select id="cidade" name="cidade" required>
+                                <option value="">Selecione uma cidade</option>
+                            </select>
+                        </div>
                         
                         <label for="logradouro">Logradouro *</label>
                         <input type="text" id="logradouro" name="logradouro" required>
@@ -60,7 +99,7 @@
                         <label for="numero">Número *</label>
                         <input type="text" id="numero" name="numero" required>
                         
-                        <button type="submit">Cadastrar</button>
+                        <button type="submit" class="btn-salvar">Cadastrar</button>
                     </form>
                 </section>
             </main>

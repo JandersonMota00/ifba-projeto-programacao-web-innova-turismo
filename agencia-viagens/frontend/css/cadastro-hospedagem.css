@@ -1,62 +1,106 @@
-body {
-    font-family: 'Outfit', sans-serif;
-    background-color: #f2f5ff;
+/* Formulário */
+.formulario {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    width: 80%;
+    margin: 5% auto;
+    gap: 2rem;
 }
 
-.formulario {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+/* Campos do Formulário */
+.campos-formulario {
     width: 100%;
-    max-width: 400px;
-}
-
-form {
+    background: var(--cor-primaria);
+    padding: 3%;
+    border-radius: 15px;
+    box-shadow: 0px 6px 12px rgba(50, 66, 122, 0.3);
     display: flex;
     flex-direction: column;
+    gap: 15px;
+    align-items: center;
 }
 
 label {
-    font-weight: 600;
-    margin-top: 10px;
+    font-weight: bold;
+    color: var(--cor-terciaria);
+    display: block;
+    margin-bottom: 5px;
 }
 
-input {
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-button {
-    margin-top: 20px;
-    padding: 10px;
-    background: #405394;
-    color: white;
+input, select {
+    width: 100%;
+    padding: 12px;
     border: none;
-    border-radius: 5px;
-    font-size: 18px;
+    border-radius: 8px;
+    font-size: 1em;
+    background-color: var(--cor-secundaria);
+}
+
+/* Estilizando os selects */
+.select-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.select-container label {
+    font-size: 1em;
+    font-weight: bold;
+    color: var(--cor-terciaria);
+}
+
+.select-container select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: var(--cor-secundaria);
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
     cursor: pointer;
 }
 
-button:hover {
-    background: #e94e1b;
+.select-container select:focus {
+    border-color: var(--cor-quaternaria);
+    outline: none;
 }
 
+/* Botão de Salvar */
+.btn-salvar {
+    width: 15em;
+    padding: 12px;
+    background: var(--cor-primaria);
+    color: var(--cor-terciaria);
+    font-size: 1em;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: bold;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+    margin: 20px auto 0;
+}
+
+/* Efeito Hover */
+.btn-salvar:hover {
+    background: var(--cor-quaternaria);
+    transform: scale(1.05);
+}
+
+/* Responsividade */
 @media (max-width: 768px) {
     .formulario {
         width: 90%;
     }
-}
-
-@media (max-width: 480px) {
-    button {
-        font-size: 16px;
+    .select-container {
+        flex-direction: column;
     }
 }
