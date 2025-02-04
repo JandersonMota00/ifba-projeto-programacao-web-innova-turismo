@@ -1,11 +1,8 @@
 /* Formulário */
 .formulario-conteiner {
     display: block;
-    justify-content: space-between;
-    align-items: center;
     width: 80%;
     margin-top: 7.5%;
-    gap: 2rem; /* Adicionando espaço entre os elementos */
 }
 
 /* Upload de Foto */
@@ -37,7 +34,7 @@
 }
 
 fieldset {
-    gap: 2%;
+    width: 100%;
 }
 
 legend {
@@ -55,6 +52,8 @@ fieldset, .caixa {
 .caixa {
     display: flex;
     flex-wrap: wrap;
+    gap: 2%;
+    width: 100%;
 }
 
 .caixa-input {
@@ -94,7 +93,7 @@ fieldset, .caixa {
     width: 100%;
     padding: 12px;
     border: none;
-    font-size: .7em;
+    font-size: .9em;
     background-color: var(--cor-secundaria);
 }
 
@@ -112,9 +111,7 @@ option:hover {
     border-radius: 8px;
     border: none;
     cursor: pointer;
-    text-align: center;
     display: flex;
-    align-items: center;
     justify-content: center;
     gap: 8px; /* Espaço entre ícone e texto */
     font-weight: bold;
