@@ -6,11 +6,11 @@ CREATE TABLE IF NOT EXISTS usuarios (
     nome VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL,
     telefone VARCHAR(50) NOT NULL,
-    `status` BOOLEAN NOT NULL
+    ativo BOOLEAN NOT NULL
 );
 
 -- Inserção de registros
-INSERT INTO usuarios (nome, email, telefone, `status`) VALUES
+INSERT INTO usuarios (nome, email, telefone, ativo) VALUES
 ('João Silva', 'joao.silva@example.com', '+5511987654321', TRUE),
 ('Maria Oliveira', 'maria.oliveira@example.com', '+5511976543210', TRUE),
 ('Carlos Almeida', 'carlos.almeida@example.com', '+5511965432109', FALSE),

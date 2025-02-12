@@ -24,7 +24,7 @@ public class Usuario extends Pessoa {
 	@Column(name = "id_usuario", nullable = false)
 	private Long idUsuario;
 
-	@Column(name = "status", nullable = false)
+	@Column(name = "ativo", nullable = false)
 	private Boolean ativo;
 
 	// Esse construtor vazio é apenas para o Hibernate parar de dar erro.
@@ -41,7 +41,7 @@ public class Usuario extends Pessoa {
 
 	@Override
     public String obterDescricao() {
-        return String.format("ID: %d, Usuário: %s, Email: %s, Telefone: %s, Status: %s",
+        return String.format("ID: %d, Usuário: %s, Email: %s, Telefone: %s, Ativo: %s",
                 this.getIdUsuario(), super.getNome(), super.getEmail(), super.getTelefone(), this.getAtivo(),
                 (ativo ? "Ativo" : "Inativo"));
     }
