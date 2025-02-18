@@ -1,66 +1,132 @@
-.cadastro-container {
-    max-width: 65vw;
-    margin: 15vh auto 0;
-    padding: 2.5rem;
-    background-color: #405394;
-    border-radius: 1rem;
+.upload-de-foto, .campos-formulario, fieldset,
+.caixa, .lado-a-lado, .lado-mesclado, .caixa input,
+select {
+    width: 100%;
+}
+
+.campos-formulario, .caixa, .lado-a-lado,
+.lado-mesclado, .btn-salvar {
     display: flex;
-    flex-direction: column;
+}
+
+.formulario-container, .upload-de-foto,
+.campos-formulario, .btn-salvar {
     align-items: center;
 }
 
-.cadastro-form {
-    display: flex;
+.upload-de-foto, .btn-salvar {
+    justify-content: center;
+}
+
+/* Formulário */
+.formulario-container {
+    display: block;
+    width: 80%;
+    margin-top: 7.5%;
+    gap: 2rem;
+}
+
+.menu-hamburger {
+    display: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin: 10px;
+    color: var(--color-second);
+}
+
+/* Upload de Foto */
+.upload-de-foto {
+    margin-bottom: 7.5%;
+    height: 35%;
+    background: #B4C5FF;
+    font-size: 2vw;
+    color: #555;
+    border-radius: 10px;
+    border: 3px solid #87A2FF;
+}
+
+.campos-formulario {
+    background: var(--cor-primaria);
+    padding: 3%;
+    border-radius: 15px;
+    box-shadow: 0px 6px 12px rgba(50, 66, 122, 0.3);
     flex-direction: column;
-    width: 100%;
-    gap: 1.5rem;
+    gap: 15px;
 }
 
-.campo {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+fieldset {
+    gap: 2%;
 }
 
-.campo label {
-    font-size: 1.2rem;
-    color: #F2F5FF;
-    margin-bottom: 0.5rem;
+.caixa {
+    flex-wrap: wrap;
 }
 
-.obrigatorio {
-    color: inherit;
-    font-weight: bold;
+legend {
+    color: var(--cor-terciaria);
 }
 
-/* Campos de entrada */
-.campo input,
-.campo select {
-    padding: 0.8rem;
-    font-size: 1rem;
-    color: #333;
-    background-color: #F2F5FF;
-    border: none;
-    border-radius: 0.5rem;
+legend, .lado-a-lado {
+    margin-bottom: 2%;
 }
 
-/* Botão de Salvar*/
-.btn-salvar {
-    width: 15em;
+.lado-a-lado, .lado-mesclado {
+    justify-content: space-between;
+}
+
+.lado-a-lado, .caixa-contato {
+    gap: 3%;
+}
+
+.telefone {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.telefone-selecao {
+    border-left: 1px solid #d6d6d6;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    width: 79%;
+}
+
+.caixa-input {
+    flex-grow: 1;
+    flex-basis: 200px;
+    margin-bottom: 1em;
+}
+
+.input-sem-ponta {
+    border-radius: 8px;
+}
+
+.caixa input, select {
     padding: 12px;
+    border: none;
+    background-color: var(--cor-secundaria);
+}
+
+.btn-salvar {
+    width: 15em; /* Reduz o tamanho */
+    padding: 12px; /* Tamanho proporcional */
     background: var(--cor-primaria);
     color: var(--cor-terciaria);
     font-size: 1em;
     border-radius: 8px;
     border: none;
     cursor: pointer;
-    display: flex;
-    justify-content: center;
-    gap: 8px;
+    text-align: center;
+    gap: 8px; /* Espaço entre ícone e texto */
     font-weight: bold;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease-in-out;
-    margin: 30px auto 0;
+    margin: 20px auto 0; /* Centraliza o botão */
+}
+
+/* Ícone dentro do botão */
+.btn-salvar i {
+    font-size: 1vw;
 }
 
 /* Efeito Hover */
@@ -69,22 +135,14 @@
     transform: scale(1.05);
 }
 
-/* Efeito ao clicar */
+/* Melhora de visibilidade ao clicar */
 .btn-salvar:active {
     background: #0B2C87;
     transform: scale(0.98);
 }
 
-/* Responsividade */
-@media (max-width: 1024px) {
-    .cadastro-container {
-        max-width: 75vw;
-    }
-}
-
-@media (max-width: 768px) {
-    .cadastro-container {
-        max-width: 85vw;
-        margin: 10vh auto 0;
+@media (max-width: 540px) {    
+    h1 {
+        font-size: 1em;
     }
 }
