@@ -1,70 +1,50 @@
-.formulario {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    margin: 5% auto;
-    gap: 2rem;
-}
-
-.campos-formulario {
-    width: 100%;
-    background: var(--cor-primaria);
-    padding: 3%;
-    border-radius: 15px;
-    box-shadow: 0px 6px 12px rgba(50, 66, 122, 0.3);
+.cadastro-container {
+    max-width: 65vw;
+    margin: 15vh auto 0;
+    padding: 2.5rem;
+    background-color: #405394;
+    border-radius: 1rem;
     display: flex;
     flex-direction: column;
-    gap: 15px;
     align-items: center;
 }
 
-label {
-    font-weight: bold;
-    color: var(--cor-terciaria);
-    display: block;
-    margin-bottom: 5px;
+.cadastro-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1.5rem;
 }
 
-input, select {
+.campo {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    padding: 12px;
+}
+
+.campo label {
+    font-size: 1.2rem;
+    color: #F2F5FF;
+    margin-bottom: 0.5rem;
+}
+
+.obrigatorio {
+    color: inherit;
+    font-weight: bold;
+}
+
+/* Campos de entrada */
+.campo input,
+.campo select {
+    padding: 0.8rem;
+    font-size: 1rem;
+    color: #333;
+    background-color: #F2F5FF;
     border: none;
-    border-radius: 8px;
-    font-size: 1em;
-    background-color: var(--cor-secundaria);
+    border-radius: 0.5rem;
 }
 
-.select-container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.select-container label {
-    font-size: 1em;
-    font-weight: bold;
-    color: var(--cor-terciaria);
-}
-
-.select-container select {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background: var(--cor-secundaria);
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 1em;
-    cursor: pointer;
-}
-
-.select-container select:focus {
-    border-color: var(--cor-quaternaria);
-    outline: none;
-}
-
+/* Botão de Salvar*/
 .btn-salvar {
     width: 15em;
     padding: 12px;
@@ -74,27 +54,37 @@ input, select {
     border-radius: 8px;
     border: none;
     cursor: pointer;
-    text-align: center;
     display: flex;
-    align-items: center;
     justify-content: center;
     gap: 8px;
     font-weight: bold;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease-in-out;
-    margin: 20px auto 0;
+    margin: 30px auto 0;
 }
 
+/* Efeito Hover */
 .btn-salvar:hover {
     background: var(--cor-quaternaria);
     transform: scale(1.05);
 }
 
-@media (max-width: 768px) {
-    .formulario {
-        width: 90%;
+/* Efeito ao clicar */
+.btn-salvar:active {
+    background: #0B2C87;
+    transform: scale(0.98);
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .cadastro-container {
+        max-width: 75vw;
     }
-    .select-container {
-        flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    .cadastro-container {
+        max-width: 85vw;
+        margin: 10vh auto 0;
     }
 }
