@@ -7,7 +7,7 @@
     <link rel="stylesheet" href=".././css/reset.css">
     <link rel="stylesheet" href=".././css/styles.css">
     <link rel="stylesheet" href=".././css/exibicao-cadastro-cliente.css">
-    <title>Funcionários</title>
+    <title>Clientes</title>
     <style>
         @media (max-width: 540px) {
             .menu-hamburger {
@@ -45,7 +45,7 @@
             <!-- Cabeçalho -->
             <header>
                 <div class="caixa-cabecalho">
-                    <h1>Funcionários</h1>
+                    <h1>Clientes</h1>
                     <div class="info-usuario">
                         <img src="../assets/icons/icone-avatar.svg" class="avatar" alt="Avatar">
                         <div class="detalhes-usuario">
@@ -71,8 +71,8 @@
             <section class="cards-section">
                 <article class="card">
                     <img src="../assets/backgrounds/perfil-equipe.png" alt="Foto do Funcionário">
-                    <h2>Nome do Funcionário</h2>
-                    <p>Cargo</p>
+                    <h2>Nome do Cliente</h2>
+                    <p>Descrição</p>
                     <div class="botoes">
                         <button class="botao-editar">
                             <img src="../assets/icons/botao-editar.svg" alt="Editar" class="icone-botao">
@@ -81,10 +81,6 @@
                         <button class="botao-deletar">
                             <img src="../assets/icons/botao-deletar.svg" alt="Deletar" class="icone-botao">
                             Deletar
-                        </button>
-                        <button class="botao-ativo ativo">
-                            <img src="../assets/icons/botao-ativo.svg" alt="Ativo" class="icone-botao">
-                            Ativo
                         </button>
                     </div>
                 </article>
@@ -97,25 +93,6 @@
     <script>
         document.getElementById("alterar-menu").addEventListener("click", function() {
             document.getElementById("barra-lateral").classList.toggle("active");
-        });
-
-        // Script para alternar o estado do botão de ativo/inativo
-        document.querySelectorAll('.botao-ativo').forEach(botao => {
-            botao.addEventListener('click', function() {
-                const img = this.querySelector('img');
-                if (this.classList.contains('ativo')) {
-                    this.classList.remove('ativo');
-                    this.classList.add('inativo');
-                    this.textContent = 'Inativo';
-                    img.src = '../assets/icons/botao-ativo.svg'; // Ícone de inativo
-                } else {
-                    this.classList.remove('inativo');
-                    this.classList.add('ativo');
-                    this.textContent = 'Ativo';
-                    img.src = '../assets/icons/botao-inativo.svg'; // Ícone de ativo
-                }
-                this.prepend(img); // Reposiciona o ícone após alterar o texto
-            });
         });
     </script>
 
