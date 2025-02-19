@@ -1,129 +1,139 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap">
-        <link rel="stylesheet" href="../css/reset.css">
-        <link rel="stylesheet" href="./modelo-responsivo/styles.css">
-        <link rel="stylesheet" href="../css/cadastro-hospedagem.css">
-        <title>Cadastro Hospedagem</title>
-        <style>
-            @media (max-width: 540px) {
-                .menu-hamburger {
-                    display: flex; /* Verifique se não há caracteres estranhos aqui */
-                }
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="./modelo-responsivo/styles.css">
+    <link rel="stylesheet" href="../css/cadastro-hospedagem.css">
+    <title>Cadastro Hospedagem</title>
+    <style>
+        @media (max-width: 540px) {
+            .menu-hamburger {
+                display: flex;
+                /* Verifique se não há caracteres estranhos aqui */
             }
-        </style>
-    </head>
-    <body>        
-        <div class="fundo-conteudo">
-            <!-- Menu Hambúrguer -->
-            <div class="menu-hamburger" id="alterar-menu">
-                <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 24 24">
-                    <path fill="currentColor" d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2M6 7h12v2H6zm0 4h12v2H6zm0 4h12v2H6z" />
-                </svg>
-            </div>
-            
-            <!-- Barra Lateral -->
-            <aside class="barra-lateral" id="barra-lateral">
-                <div class="logo">
-                    <img src="../assets/backgrounds/logo-innova-tour.png" alt="Innova Turismo">
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="#"><img src="../assets/icons/icone-das-hospedagens.svg" class="icone"> Hospedagens</a></li>
-                        <li><a href="#"><img src="../assets/icons/icone-dos-pacotes-de-viagens.svg" class="icone"> Pacote</a></li>
-                        <li><a href="#"><img src="../assets/icons/icone-dos-funcionarios.svg" class="icone"> Funcionários</a></li>
-                        <li><a href="#"><img src="../assets/icons/icone-dos-clientes.svg" class="icone"> Clientes</a></li>
-                    </ul>
-                </nav>
-            </aside>
+        }
+    </style>
+</head>
 
-            <!-- Conteúdo Principal -->
-            <main class="conteudo">
-                <!-- Cabeçalho -->
-                <header>
-                    <div class="caixa-cabecalho">
-                        <h1>Cadastro Hospedagem</h1> <!-- Altere aqui para a sua respectiva tela -->
-                        <div class="info-usuario">
-                            <img src="../assets/icons/icone-avatar.svg" class="avatar" alt="Avatar">
-                            <div class="detalhes-usuario">
-                                <p>Lorem Ipsum Dolo</p>
-                                <small>Admin</small>
-                            </div>
-                        </div>
-                    </div>
-                </header>
-
-                <section class="formulario-container">
-
-                     <!-- Área para Foto Expandida -->
-                    <div class="upload-de-foto">
-                        <span>+</span>
-                    </div>
-
-                    <form class="campos-formulario">
-                        <fieldset>
-                            <legend>Dados Pessoais</legend>
-                
-                            <div class="caixa">
-                                <label for="nome">Nome <span class="obrigatorio">*</span></label>
-                                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
-                            </div>
-                
-                            <div class="caixa">
-                                <label for="email">Email <span class="obrigatorio">*</span></label>
-                                <input type="email" id="email" name="email" placeholder="Digite seu email" required>
-                            </div>
-                
-                            <div class="lado-a-lado">
-                                <div class="caixa">
-                                    <label for="telefone">Telefone <span class="obrigatorio">*</span></label>
-                                    <input type="tel" id="telefone" name="telefone" placeholder="(xx) xxxxx-xxxx" class="telefone" required>
-                                </div>
-                
-                                <div class="caixa">
-                                    <label for="pais">País <span class="obrigatorio">*</span></label>
-                                    <select id="pais" name="pais" required></select>
-                                </div>
-                            </div>
-                
-                            <div class="lado-a-lado">
-                                <div class="caixa">
-                                    <label for="estado">Estado <span class="obrigatorio">*</span></label>
-                                    <select id="estado" name="estado" required></select>
-                                </div>
-                
-                                <div class="caixa">
-                                    <label for="cidade">Cidade <span class="obrigatorio">*</span></label>
-                                    <select id="cidade" name="cidade" required></select>
-                                </div>
-                            </div>
-                
-                            <div class="caixa">
-                                <label for="logradouro">Logradouro <span class="obrigatorio">*</span></label>
-                                <input type="text" id="logradouro" name="logradouro" placeholder="Digite o logradouro" required>
-                            </div>
-                        </fieldset>
-                    </form>
-                </section>
-                
-                <!-- Botão de Salvar (fora do formulário, centralizado) -->
-                <button class="btn-salvar">
-                    <img src="../assets/icons/icone-botao-de-salvar.svg" class="icone">Salvar
-                </button>
-                
-                
-            </main>
+<body>
+    <div class="fundo-conteudo">
+        <!-- Menu Hambúrguer -->
+        <div class="menu-hamburger" id="alterar-menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                    d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2M6 7h12v2H6zm0 4h12v2H6zm0 4h12v2H6z" />
+            </svg>
         </div>
 
-        <!-- Script para ativar/desativar o menu -->
-        <script>
-            document.getElementById("alterar-menu").addEventListener("click", function() {
-                document.getElementById("barra-lateral").classList.toggle("active");
-            });
-        </script>
+        <!-- Barra Lateral -->
+        <aside class="barra-lateral" id="barra-lateral">
+            <div class="logo">
+                <img src="../assets/backgrounds/logo-innova-tour.png" alt="Innova Turismo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#"><img src="../assets/icons/icone-das-hospedagens.svg" class="icone"> Hospedagens</a>
+                    </li>
+                    <li><a href="#"><img src="../assets/icons/icone-dos-pacotes-de-viagens.svg" class="icone">
+                            Pacote</a></li>
+                    <li><a href="#"><img src="../assets/icons/icone-dos-funcionarios.svg" class="icone">
+                            Funcionários</a></li>
+                    <li><a href="#"><img src="../assets/icons/icone-dos-clientes.svg" class="icone"> Clientes</a></li>
+                </ul>
+            </nav>
+        </aside>
 
-    </body>
+        <!-- Conteúdo Principal -->
+        <main class="conteudo">
+            <!-- Cabeçalho -->
+            <header>
+                <div class="caixa-cabecalho">
+                    <h1>Cadastro Hospedagem</h1> <!-- Altere aqui para a sua respectiva tela -->
+                    <div class="info-usuario">
+                        <img src="../assets/icons/icone-avatar.svg" class="avatar" alt="Avatar">
+                        <div class="detalhes-usuario">
+                            <p>Lorem Ipsum Dolo</p>
+                            <small>Admin</small>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <section class="formulario-container">
+
+                <!-- Área para Foto Expandida -->
+                <div class="upload-de-foto">
+                    <span>+</span>
+                </div>
+
+                <form class="campos-formulario">
+                    <fieldset>
+                        <legend>Dados Pessoais</legend>
+
+                        <div class="caixa">
+                            <label for="nome">Nome <span class="obrigatorio">*</span></label>
+                            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                        </div>
+
+                        <div class="caixa">
+                            <label for="email">Email <span class="obrigatorio">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+                        </div>
+
+                        <div class="lado-a-lado">
+                            <div class="caixa">
+                                <label for="telefone">Telefone <span class="obrigatorio">*</span></label>
+                                <input type="tel" id="telefone" name="telefone" placeholder="(xx) xxxxx-xxxx"
+                                    class="telefone" required>
+                            </div>
+
+                            <div class="caixa">
+                                <label for="pais">País <span class="obrigatorio">*</span></label>
+                                <select id="pais" name="pais" required></select>
+                            </div>
+                        </div>
+
+                        <div class="lado-a-lado">
+                            <div class="caixa">
+                                <label for="estado">Estado <span class="obrigatorio">*</span></label>
+                                <select id="estado" name="estado" required></select>
+                            </div>
+
+                            <div class="caixa">
+                                <label for="cidade">Cidade <span class="obrigatorio">*</span></label>
+                                <select id="cidade" name="cidade" required></select>
+                            </div>
+                        </div>
+
+                        <div class="caixa">
+                            <label for="logradouro">Logradouro <span class="obrigatorio">*</span></label>
+                            <input type="text" id="logradouro" name="logradouro" placeholder="Digite o logradouro"
+                                required>
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
+
+            <!-- Botão de Salvar (fora do formulário, centralizado) -->
+            <button class="btn-salvar">
+                <img src="../assets/icons/icone-botao-de-salvar.svg" class="icone">Salvar
+            </button>
+
+
+        </main>
+    </div>
+
+    <!-- Script para ativar/desativar o menu -->
+    <script>
+        document.getElementById("alterar-menu").addEventListener("click", function () {
+            document.getElementById("barra-lateral").classList.toggle("active");
+        });
+    </script>
+
+</body>
+
 </html>
