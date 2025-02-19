@@ -190,7 +190,7 @@
         flex-direction: column;
         width: 100%;
         align-items: center;
-        padding: 1rem 0; /* Ajusta o padding para dispositivos menores */
+        padding: 5rem 0; /* Ajusta o padding para dispositivos menores */
     }
 
     .search-section form {
