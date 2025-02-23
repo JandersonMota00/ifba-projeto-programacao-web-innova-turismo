@@ -22,7 +22,6 @@ select {
 .formulario-container {
     display: block;
     width: 80%;
-    margin-top: 7.5%;
     gap: 2rem;
 }
 
