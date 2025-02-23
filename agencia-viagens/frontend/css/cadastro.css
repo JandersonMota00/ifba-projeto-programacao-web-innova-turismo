@@ -21,7 +21,8 @@ select {
 /* Formulário */
 .formulario-container {
     display: block;
-    width: 80%;
+    justify-items: center;
+    width: 100%;
     gap: 2rem;
 }
 
