@@ -8,6 +8,15 @@
         <link rel="stylesheet" href="../css/styles.css">
         <link rel="stylesheet" href="../css/cadastro-pacote.css">
         <title>#</title>
+    <style>
+        @media (max-width: 540px) {
+            .menu-hamburger {
+                display: flex;
+                /* Verifique se não há caracteres estranhos aqui */
+            }
+        }
+    </style>
+    
     </head>
     <body>
         <div class="fundo"></div> <!-- Background Geral -->
@@ -43,9 +52,9 @@
                 </header>
                   <!-- ESCREVA SEU CÓDIGO AQUI -->
             <div class="entrada"> 
-           <input type="text" placeholder="Insira um título">  <!-- "value" -->
-           <input type="date" placeholder="Data de partida"> <!-- mudar-->
-           <input type="date" placeholder="Data de chegada"> <!-- mudar-->
+           <input type="text" value="Insira um título">  <!-- "value" -->
+           <input type="date" value="Data de partida"> <!-- mudar-->
+           <input type="date" value="Data de chegada"> <!-- mudar-->
            </div> 
            
            <div class="detalhes">
@@ -54,7 +63,7 @@
             <input type="text" placeholder="Passeios">
             <input type="text" placeholder="Translado">
             <input type="text" placeholder="Valor">
-            <button class="save-btn">Salvar</button>
+            <button class="salvar-btn">Salvar</button>
         </div>
 
 
