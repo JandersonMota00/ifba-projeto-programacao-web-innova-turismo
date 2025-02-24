@@ -8,7 +8,7 @@
 
 input {
    
-    width: 100%;
+    width: 100%;        
     padding: 15px; /**/
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -22,10 +22,9 @@ input {
     margin-top: 20px;
     color: white;
     display: flex;
-   flex-direction: column;
+    flex-direction: column;
     gap: 20px;
-
- 
+    
 }
 
 .salvar-btn {
@@ -44,9 +43,5 @@ input {
     gap: 2rem;
 }
 
-.dadosviagem {
-    flex-grow: 1;
-    flex-basis: 48%;
-    margin-bottom: 1rem;
-}
+
 

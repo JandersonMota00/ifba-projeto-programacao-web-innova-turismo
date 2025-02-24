@@ -1,76 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap">
-        <link rel="stylesheet" href="../css/reset.css">
-        <link rel="stylesheet" href="../css/styles.css">
-        <link rel="stylesheet" href="../css/cadastro.css">
-        <link rel="stylesheet" href="../css/cadastro-pacote.css">
-        <title>#</title>
-        
-        <style>
-            .caixa-conteudo {
-                display: flex;
-                width: 80%;
-                /*flex-wrap: wrap;*/
-                gap: 2em;
-            }
 
-            .lado-a-lado {
-                flex-grow: 1;
-            }
-
-            .upload-de-foto {
-                margin: 0;
-                height: auto;
-                flex-basis: 300px;
-                justify-content: center;
-            }
-
-            .campos-formulario {
-                margin: 0;
-            }
-
-            @media (max-width: 540px) {
-                .caixa-cabecalho {
-                    justify-content: flex-end;
-                    gap: 5%;
-                }
-
-                .caixa-cabecalho h1 {
-                    font-size: 1.8rem;
-                }
-
-                .caixa-conteudo {
-                    margin-top: 20%;
-                    display: grid;
-                }
-
-                .menu-hamburger {
-                    display: flex;
-                    width: 3.5rem;
-                    height: 3.5rem;
-                }
-
-                .upload-de-foto {
-                    width: auto;
-                    height: 250px;
-                }
-            }
-        </style>   <!--inserido style,Verficar se está correto -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/cadastro.css">
+    <link rel="stylesheet" href="../css/cadastro-pacote.css">
+    <title>#</title>
 
 </head>
-<body>        
+
+<body>
     <div class="fundo-conteudo">
         <!-- Menu Hambúrguer -->
         <div class="menu-hamburger" id="alterar-menu">
             <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 24 24">
-                <path fill="currentColor" d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2M6 7h12v2H6zm0 4h12v2H6zm0 4h12v2H6z" />
+                <path fill="currentColor"
+                    d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2M6 7h12v2H6zm0 4h12v2H6zm0 4h12v2H6z" />
             </svg>
         </div>
-        
+
         <!-- Barra Lateral -->
         <aside class="barra-lateral" id="barra-lateral">
             <div class="logo">
@@ -78,16 +30,19 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#"><img src="../assets/icons/icone-das-hospedagens.svg" class="icone"> Hospedagens</a></li>
-                    <li><a href="#"><img src="../assets/icons/icone-dos-pacotes-de-viagens.svg" class="icone"> Pacote</a></li>
-                    <li><a href="#"><img src="../assets/icons/icone-dos-funcionarios.svg" class="icone"> Funcionários</a></li>
+                    <li><a href="#"><img src="../assets/icons/icone-das-hospedagens.svg" class="icone"> Hospedagens</a>
+                    </li>
+                    <li><a href="#"><img src="../assets/icons/icone-dos-pacotes-de-viagens.svg" class="icone">
+                            Pacote</a></li>
+                    <li><a href="#"><img src="../assets/icons/icone-dos-funcionarios.svg" class="icone">
+                            Funcionários</a></li>
                     <li><a href="#"><img src="../assets/icons/icone-dos-clientes.svg" class="icone"> Clientes</a></li>
                 </ul>
             </nav>
         </aside>
-  
-         <!-- Conteúdo Principal -->
-         <main class="conteudo">
+
+        <!-- Conteúdo Principal -->
+        <main class="conteudo">
             <!-- Cabeçalho -->
             <header>
                 <div class="caixa-cabecalho">
@@ -101,38 +56,40 @@
                     </div>
                 </div>
             </header>
-                     
-                <!---->
+
+            <!---->
+
+            <!-- ESCREVA SEU CÓDIGO AQUI -->
+
+            <section class="formulario">
+
+
+                <div class="entrada">
+                    <input type="text" placeholder="Insira um título"> <!-- "value" -->
+                    <input type="text" placeholder="Insira uma descrição">
+                    <input type="date" placeholder="Data de partida"> <!-- mudar-->
+                    <input type="date" placeholder="Data de chegada"> <!-- mudar-->
+                </div>
+
+                <div class="detalhes">
+                    <fieldset>
+                        <legend> Dados viagem </legend>
                 
-                <!-- ESCREVA SEU CÓDIGO AQUI -->
+                            <input type="text" placeholder="Estado">
+                            <input type="text" placeholder="Hospedagem">
+                            <input type="text" placeholder="Passeios">
+                            <input type="text" placeholder="Translado">
+                            <input type="text" placeholder="Valor">
+                            <button class="salvar-btn">Salvar</button>
+                       
+                    </fieldset>
+                </div>
 
-    <section class="formulario" > 
-     
-
-        <div class="entrada"> 
-           <input type="text" placeholder="Insira um título">  <!-- "value" -->
-           <input type="date" placeholder="Data de partida"> <!-- mudar-->
-           <input type="date" placeholder="Data de chegada"> <!-- mudar-->
-        </div> 
-
-           
-           <fieldset>
-            <legend> Dados viagem</legend>
-           <div class="dadosviagem">
-            <input type="text" placeholder="Estado">
-            <input type="text" placeholder="Hospedagem">
-            <input type="text" placeholder="Passeios">
-            <input type="text" placeholder="Translado">
-            <input type="text" placeholder="Valor">
-            <button class="salvar-btn">Salvar</button>
-        </div>
-        </fieldset>
-    </section>
+            </section>
 
 
-            </main>
-        </div>
-    </body>
+        </main>
+    </div>
+</body>
+
 </html>
-        
-       
