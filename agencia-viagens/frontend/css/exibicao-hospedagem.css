@@ -68,13 +68,23 @@
 }
 
 .btn-editar {
-    background: #4CAF50;
-    color: #FFF;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    flex: 1;
+}
+
+.botao-editar:hover {
+    background-color: var(--cor-quaternaria);
 }
 
 .btn-deletar {
-    background: #E74C3C;
-    color: #FFF;
+    background-color: var(--cor-primaria); /* Cor primária por padrão */
+    color: var(--cor-terciaria);
+    flex: 1;
+}
+
+.botao-deletar:hover {
+    background-color: var(--cor-quaternaria);
 }
 
 .btn-habilitar {
