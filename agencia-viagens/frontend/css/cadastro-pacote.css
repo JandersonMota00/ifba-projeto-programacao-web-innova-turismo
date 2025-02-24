@@ -36,3 +36,17 @@ input {
     border-radius: 5px;
     cursor: pointer;
 }
+/* adicionando */
+.formulario {
+    display: block;
+    justify-items: center;
+    width: 100%;
+    gap: 2rem;
+}
+
+.dadosviagem {
+    flex-grow: 1;
+    flex-basis: 48%;
+    margin-bottom: 1rem;
+}
+
