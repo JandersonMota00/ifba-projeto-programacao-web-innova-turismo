@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap">
-    <link rel="stylesheet" href=".././css/reset.css">
-    <link rel="stylesheet" href=".././css/styles.css">
-    <link rel="stylesheet" href=".././css/exibicao-cadastro-cliente.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/exibicao-cadastro-cliente.css">
+    <link rel="stylesheet" href="../css/pesquisa.css">
     <title>Clientes</title>
     <style>
         @media (max-width: 540px) {
@@ -57,14 +58,14 @@
             </header>
 
             <!-- Barra de Pesquisa e Botão Adicionar -->
-            <section class="search-section">
-                <form action="#" method="get" class="search-form">
-                    <div class="search-input-wrapper">
-                        <img src="../assets/icons/botao-de-pesquisar.svg" alt="Ícone de Pesquisa" class="search-icon">
+            <section class="secao-pesquisa">
+                <form action="#" method="get" class="formulario-pesquisa">
+                    <div class="entrada-pesquisa">
+                        <img src="../assets/icons/botao-de-pesquisar.svg" alt="Ícone de Pesquisa" class="icone-pesquisa">
                         <input type="text" placeholder="Pesquise" name="search" onkeydown="if(event.key === 'Enter'){ this.form.submit(); }">
                     </div>
                 </form>
-                <button class="add-button">+</button>
+                <button class="add-butao">+</button>
             </section>
 
             <!-- Cards dos Funcionários -->

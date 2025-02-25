@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap">
-    <link rel="stylesheet" href=".././css/reset.css">
-    <link rel="stylesheet" href=".././css/styles.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/exibicao-hospedagem.css">
+    <link rel="stylesheet" href="../css/pesquisa.css">
     <title>Exibição Hospedagens</title>
     <style>
         @media (max-width: 540px) {
@@ -61,6 +62,16 @@
                     </div>
                 </div>
             </header>
+
+            <section class="secao-pesquisa">
+                <form action="#" method="get" class="formulario-pesquisa">
+                    <div class="entrada-pesquisa">
+                        <img src="../assets/icons/botao-de-pesquisar.svg" alt="Ícone de Pesquisa" class="icone-pesquisa">
+                        <input type="text" placeholder="Pesquise" name="search" onkeydown="if(event.key === 'Enter'){ this.form.submit(); }">
+                    </div>
+                </form>
+                <button class="add-butao">+</button>
+            </section>
 
             <div class="bloco-exibicao">
                 <div class="upload-foto">
