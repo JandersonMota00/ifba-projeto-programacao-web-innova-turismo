@@ -73,23 +73,28 @@
     flex: 1;
 }
 
-.botao-editar:hover {
+.btn-editar:hover {
     background-color: var(--cor-quaternaria);
 }
 
 .btn-deletar {
-    background-color: var(--cor-primaria); /* Cor primária por padrão */
+    background-color: var(--cor-primaria);
     color: var(--cor-terciaria);
     flex: 1;
 }
 
-.botao-deletar:hover {
+.btn-deletar:hover {
     background-color: var(--cor-quaternaria);
 }
 
 .btn-habilitar {
-    background: #3498DB;
-    color: #FFF;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    flex: 1;
+}
+
+.btn-habilitar:hover {
+    background-color: var(--cor-quaternaria);
 }
 
 .acoes-hospedagem button:hover {
