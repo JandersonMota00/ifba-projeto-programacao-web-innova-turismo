@@ -157,7 +157,8 @@ h1 {
         height: 100%;
         width: 100%;
         background: var(--cor-terciaria);
-        box-shadow: 4px 0 10px rgba(122, 122, 122, 0.25);
+        /*box-shadow: 4px 0 10px rgba(122, 122, 122, 0.25);*/
+        box-shadow: none;
         display: flex;
         flex-direction: column;
         z-index: 1000;

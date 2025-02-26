@@ -167,10 +167,10 @@ backend/
 │   │   │   │   │   ├── viagens/        # Módulo de Viagens
 │   │   │   │   │   ├── reservas/       # Módulo de Reservas
 │   │   │   │   ├── Application.java    # Classe principal do Spring Boot
-│   │   ├── jte/                        # Diretório contendo templates JTE (Java Template Engine) usados para gerar páginas HTML de forma dinâmica no backend.
-│   ├── resources/
-│   │   ├── application.properties      # Configurações do Spring Boot
-│   │   ├── static/                     # Arquivos estáticos (opcional)
+│   │   │   ├── jte/                    # Diretório contendo templates JTE (Java Template Engine) usados para gerar páginas HTML de forma dinâmica no backend.
+│   │   ├── resources/
+│   │   │   ├── application.properties      # Configurações do Spring Boot
+│   │   │   ├── static/                     # Arquivos estáticos (opcional)
 ├── target/                             # Diretório gerado automaticamente pelo Maven, onde são armazenados os arquivos compilados, JARs ou WARs do projeto.
 ├── Dockerfile                          # Configuração do Docker para o backend
 ├── pom.xml                             # Arquivo de configuração do Maven, onde são definidos as dependências, plugins, informações do projeto e configurações de build.
