@@ -11,7 +11,7 @@
 
 .caixa-conteudo {
     display: flex;
-    width: 80%; /**/
+    width: 60%; /*80*/
     /*flex-wrap: wrap;*/
     gap: 2em;
 }
@@ -20,7 +20,7 @@
 .envio-de-foto {
     margin-top: 7.5vh;
     margin-bottom: 7.5vh;
-    width: 100%; /*100%*/
+    width: 40%; /*100%*/
     height: 35vh; /*35vh*/
     background: #B4C5FF;
     display: flex;
@@ -35,8 +35,9 @@
 }
 
 .btn-salvar {
-    width: 15rem; 
-    padding: 1.0rem; /*1.2rem*/
-    margin-right: 18.5rem; /*opc*/
+    width: 10rem; /*15*/
+    padding: 0.7rem; /*1.2rem*/
+    margin-right: 29.5rem; /*posicionar o botao*/
    
 }
+
