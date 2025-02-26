@@ -18,7 +18,7 @@
 
 /* Upload de Foto */
 .envio-de-foto {
-    margin-top: 7.5vh;
+    margin-top: 7.5vh;  /*7.5vh*/
     margin-bottom: 7.5vh;
     width: 40%; /*100%*/
     height: 35vh; /*35vh*/
@@ -41,3 +41,28 @@
    
 }
 
+
+.input-file {
+    display: none;
+}
+
+.p{
+    width: 5px;
+}
+
+.file-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.0vw;
+    color: #555;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+}
