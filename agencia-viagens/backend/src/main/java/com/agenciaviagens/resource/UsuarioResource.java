@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.agenciaviagens.event.RecursoCriadoEvent;
+import com.agenciaviagens.model.Telefone;
 import com.agenciaviagens.model.Usuario;
 import com.agenciaviagens.repository.UsuarioRepository;
 import com.agenciaviagens.repository.filter.UsuarioFilter;
@@ -28,6 +30,7 @@ import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/usuarios")
+// @CrossOrigin(origins = "*")
 public class UsuarioResource {
 
 	@Autowired
@@ -97,8 +100,8 @@ public class UsuarioResource {
 	
 	@PutMapping("/{idUsuario}/telefones")
 	@ResponseStatus(HttpStatus.NO_CONTENT)
-	public void atualizarPropriedadeTelefone(@PathVariable Long idUsuario, @RequestBody String telefone) {
-	    usuarioService.atualizarPropriedadeTelefone(idUsuario, telefone);
+	public void atualizarPropriedadeTelefone(@PathVariable Long idUsuario, @RequestBody List<Telefone> telefones) {
+	    usuarioService.atualizarTelefones(idUsuario, telefones);
 	}
 
 	@PutMapping("/{idUsuario}/ativo")

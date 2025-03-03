@@ -14,35 +14,24 @@ import lombok.Setter;
 @MappedSuperclass
 public abstract class Pessoa {
 
-	@NotNull
-	@Size(min = 3, max = 255)
-	@Column(name = "nome")
-	private String nome;
-	
-	@NotNull
-	@Column(name = "email")
-	private String email;
-	
-	@NotNull
-	@Column(name = "telefone")
-	private String telefone;
-	
-	public Pessoa(String nome, String email) {
+    @NotNull
+    @Size(min = 3, max = 255)
+    @Column(name = "nome")
+    private String nome;
+
+    @NotNull
+    @Column(name = "email", unique = true)
+    private String email;
+
+    public Pessoa(String nome, String email) {
         this.nome = nome;
         this.email = email;
     }
 
-    public Pessoa(String nome, String email, String telefone) {
-        this.nome = nome;
-        this.email = email;
-        this.telefone = telefone;
-    }
-    
     public abstract String obterDescricao();
-	
+
     @Override
     public String toString() {
-        return String.format("Nome: %s, Email: %s, Telefone: %s", nome, email, telefone);
+        return String.format("Nome: %s, Email: %s", nome, email);
     }
-
 }
