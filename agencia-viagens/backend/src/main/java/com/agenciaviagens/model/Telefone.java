@@ -5,9 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 @Entity
 @Table(name = "telefones")
@@ -25,9 +23,10 @@ public class Telefone {
     private String numero;
 
     @NotNull
-    @Column(name = "tipo", nullable = false) // Exemplo: celular, fixo, WhatsApp
+    @Column(name = "tipo", nullable = false) // Exemplo: celular, WhatsApp, Telegram
     private String tipo;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "id_usuario", nullable = false)
     private Usuario usuario;

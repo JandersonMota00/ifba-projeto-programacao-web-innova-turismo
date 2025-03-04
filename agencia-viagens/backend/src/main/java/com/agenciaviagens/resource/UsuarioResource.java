@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -69,15 +68,29 @@ public class UsuarioResource {
 	
 	@PostMapping
 	public ResponseEntity<Usuario> criar(@Valid @RequestBody Usuario usuario, HttpServletResponse response) {
+		// Associa cada telefone ao usuário antes de salvar
+		if (usuario.getTelefones() != null) {
+			usuario.getTelefones().forEach(telefone -> telefone.setUsuario(usuario));
+		}
+		
 		Usuario usuarioSalva = usuarioRepository.save(usuario);
-		publisher.publishEvent(new RecursoCriadoEvent(this, response, usuarioSalva.getIdUsuario()));			
+		publisher.publishEvent(new RecursoCriadoEvent(this, response, usuarioSalva.getIdUsuario()));
+
 		return ResponseEntity.status(HttpStatus.CREATED).body(usuarioSalva);
 	}
 	
 	@GetMapping("/{idUsuario}")
 	public ResponseEntity<Usuario> buscarPeloId(@PathVariable Long idUsuario) {
 	    Usuario usuario = usuarioRepository.findById(idUsuario).orElse(null);
-	    return usuario != null ? ResponseEntity.ok(usuario) : ResponseEntity.notFound().build();
+
+		if (usuario != null) {
+			// Garante que a lista de telefones seja carregada antes de retornar o objeto
+			usuario.getTelefones().size();
+			return ResponseEntity.ok(usuario);
+		}
+
+		return usuario != null ? ResponseEntity.ok(usuario) : ResponseEntity.notFound().build();
+	    //return ResponseEntity.notFound().build();
 	}
 	
 	@DeleteMapping("/{idUsuario}")
@@ -88,8 +101,25 @@ public class UsuarioResource {
 
 	@PutMapping("/{idUsuario}")
 	public ResponseEntity<Usuario> atualizar(@PathVariable Long idUsuario, @Valid @RequestBody Usuario usuario) {
-	    Usuario usuarioSalva = usuarioService.atualizar(idUsuario, usuario);
-	    return ResponseEntity.ok(usuarioSalva);
+	    /*Usuario usuarioSalva = usuarioService.atualizar(idUsuario, usuario);
+	    return ResponseEntity.ok(usuarioSalva);*/
+
+		return usuarioRepository.findById(idUsuario).map(usuarioExistente -> {
+			// Atualiza os dados básicos do usuário
+			usuarioExistente.setNome(usuario.getNome());
+			usuarioExistente.setEmail(usuario.getEmail());
+			usuarioExistente.setAtivo(usuario.getAtivo());
+	
+			// Atualiza os telefones
+			if (usuario.getTelefones() != null) {
+				usuario.getTelefones().forEach(telefone -> telefone.setUsuario(usuarioExistente));
+				usuarioExistente.getTelefones().clear();
+				usuarioExistente.getTelefones().addAll(usuario.getTelefones());
+			}
+	
+			Usuario usuarioAtualizado = usuarioRepository.save(usuarioExistente);
+			return ResponseEntity.ok(usuarioAtualizado);
+		}).orElseGet(() -> ResponseEntity.notFound().build());
 	}
 	
 	@PutMapping("/{idUsuario}/email")
@@ -101,7 +131,18 @@ public class UsuarioResource {
 	@PutMapping("/{idUsuario}/telefones")
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	public void atualizarPropriedadeTelefone(@PathVariable Long idUsuario, @RequestBody List<Telefone> telefones) {
-	    usuarioService.atualizarTelefones(idUsuario, telefones);
+	    //usuarioService.atualizarTelefones(idUsuario, telefones);
+
+		usuarioRepository.findById(idUsuario).ifPresent(usuario -> {
+			// Remove telefones antigos
+			usuario.getTelefones().clear();
+			
+			// Associa os novos telefones ao usuário
+			telefones.forEach(telefone -> telefone.setUsuario(usuario));
+			usuario.getTelefones().addAll(telefones);
+			
+			usuarioRepository.save(usuario);
+		});
 	}
 
 	@PutMapping("/{idUsuario}/ativo")
