@@ -128,20 +128,18 @@ public class UsuarioResource {
 	    usuarioService.atualizarPropriedadeEmail(idUsuario, email);
 	}
 	
-	@PutMapping("/{idUsuario}/telefones")
+	@PutMapping("/{idUsuario}/telefones/{idTelefone}")
 	@ResponseStatus(HttpStatus.NO_CONTENT)
-	public void atualizarPropriedadeTelefone(@PathVariable Long idUsuario, @RequestBody List<Telefone> telefones) {
-	    //usuarioService.atualizarTelefones(idUsuario, telefones);
-
+	public void atualizarTelefone(@PathVariable Long idUsuario, @PathVariable Long idTelefone, @RequestBody Telefone telefoneAtualizado) {
 		usuarioRepository.findById(idUsuario).ifPresent(usuario -> {
-			// Remove telefones antigos
-			usuario.getTelefones().clear();
-			
-			// Associa os novos telefones ao usuário
-			telefones.forEach(telefone -> telefone.setUsuario(usuario));
-			usuario.getTelefones().addAll(telefones);
-			
-			usuarioRepository.save(usuario);
+			usuario.getTelefones().stream()
+				.filter(t -> t.getId().equals(idTelefone))
+				.findFirst()
+				.ifPresent(telefone -> {
+					telefone.setNumero(telefoneAtualizado.getNumero());
+					telefone.setTipo(telefoneAtualizado.getTipo());
+					usuarioRepository.save(usuario);
+				});
 		});
 	}
 
