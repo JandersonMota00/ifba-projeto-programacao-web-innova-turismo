@@ -1,17 +1,13 @@
-@param java.util.List<String> items
-
-@template.layout.main(content = @`
-
-`)
+@param gg.jte.Content content
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>${page == null ? "Página Inícial" : page.title()}</title>
 </head>
 <body>
-    <h1>Olá, ${nome}!</h1>
+    <main>${content}</main>
 </body>
 </html>
