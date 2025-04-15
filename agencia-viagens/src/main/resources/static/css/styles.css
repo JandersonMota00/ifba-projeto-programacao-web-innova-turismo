@@ -17,19 +17,25 @@ body {
 
 header {
     margin-bottom: 5%;
-    height: 18%;
+    height: 8rem;
     background: var(--cor-primaria);
     justify-items: center;
+}
+
+header, h1 {
     align-content: center;
 }
 
-header, .formulario-container {
+header, .formulario-container, .corpo-principal, .logo img, nav ul li a, .conteudo {
     width: 100%;
 }
 
 .fundo-conteudo {
-    display: flex;
     min-height: 100vh; /* Garante que o conteúdo ocupe toda a tela */
+}
+
+.fundo-conteudo, .barra-lateral, nav ul li a, .caixa-cabecalho, .info-usuario {
+    display: flex;
 }
 
 .menu-hamburger {
@@ -39,14 +45,23 @@ header, .formulario-container {
     left: 0;
     background-color: var(--cor-terciaria);
     border: 1px solid var(--cor-secundaria);
-    border-radius: 50%;
     width: 2.5rem;
     height: 2.5rem;
-    justify-content: center;
-    align-items: center;
     cursor: pointer;
     z-index: 1001;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu-hamburger, .info-usuario img {
+    border-radius: 50%;
+}
+
+.menu-hamburger, .info-usuario {
+    justify-content: center;
+}
+
+.menu-hamburger, nav ul li a, .info-usuario {
+    align-items: center;
 }
 
 .menu-hamburger svg {
@@ -58,14 +73,12 @@ header, .formulario-container {
     height: 100vh; /* Ocupa 100% da altura da tela */
     background: var(--cor-terciaria);
     box-shadow: 4px 0 10px rgba(122, 122, 122, 0.25);
-    display: flex;
     flex-direction: column; /* Mantém os itens alinhados verticalmente */
     position: sticky;
     top: 0px;
 }
 
 .logo img {
-    width: 100%;
     transition: transform 0.3s ease-in-out;
     transform: scale(1.2);
 }
@@ -84,15 +97,15 @@ nav ul li {
 }
 
 nav ul li a {
-    width: 100%;
     padding: 10px 15px;
     border-radius: 10px;
     text-decoration: none;
     background-color: var(--cor-primaria);
     color: var(--cor-secundaria);
-    display: flex;
     justify-content: baseline;
-    align-items: center;
+}
+
+nav ul li a, .info-usuario {
     gap: 1em;
 }
 
@@ -101,45 +114,31 @@ nav ul li a {
 }
 
 .conteudo {
-    width: 100%;
     display: block;
-    /*justify-items: center;*/
 }
 
 .caixa-cabecalho {
-    width: 80%;
-    display: flex;
     justify-content: space-between;
     color: var(--cor-terciaria);
 }
 
-h1 {
-    font-size: 1.7em;
-    align-content: center;
+.caixa-cabecalho, .formulario-container {
+    width: 80%;
 }
 
-.info-usuario {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1em;
+h1 {
+    font-size: 1.7em;
 }
 
 .info-usuario img {
     padding: .2em;
     width: 2.5em;
     height: auto;
-    border-radius: 50%;
     background-color: var(--cor-terciaria);
 }
 
 .detalhes-usuario {
     min-width: 129px;
-}
-
-.formulario-container {
-    width: 80%;
-    /*height: 100%;*/
 }
 
 @media (max-width: 540px) {

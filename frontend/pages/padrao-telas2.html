@@ -1,7 +1,3 @@
-@import gg.jte.Content
-@param Content content
-@param com.agenciaviagens.dto.Page page = null
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -9,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap">
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/cadastro.css">
-    <title>${page == null ? "Página inicial" : page.title()}</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/cadastro.css">
+    <title>#</title>
     <style>
         @media (max-width: 540px) {
             .menu-hamburger {
@@ -37,28 +33,28 @@
         <!-- Barra Lateral -->
         <aside class="barra-lateral" id="barra-lateral">
             <div class="logo">
-                <img src="/assets/backgrounds/logo-innova-tour.png" alt="Innova Turismo">
+                <img src="../assets/backgrounds/logo-innova-tour.png" alt="Innova Turismo">
             </div>
             <nav>
                 <ul>
-                    <li><a href="#"><img src="/assets/icons/icone-das-hospedagens.svg" class="icone">Hospedagens</a>
+                    <li><a href="#"><img src="../assets/icons/icone-das-hospedagens.svg" class="icone">Hospedagens</a>
                     </li>
-                    <li><a href="#"><img src="/assets/icons/icone-dos-pacotes-de-viagens.svg" class="icone">Pacote</a>
+                    <li><a href="#"><img src="../assets/icons/icone-dos-pacotes-de-viagens.svg" class="icone">Pacote</a>
                     </li>
-                    <li><a href="#"><img src="/assets/icons/icone-dos-funcionarios.svg" class="icone">Funcionários</a>
+                    <li><a href="#"><img src="../assets/icons/icone-dos-funcionarios.svg" class="icone">Funcionários</a>
                     </li>
-                    <li><a href="#"><img src="/assets/icons/icone-dos-clientes.svg" class="icone">Clientes</a></li>
+                    <li><a href="#"><img src="../assets/icons/icone-dos-clientes.svg" class="icone">Clientes</a></li>
                 </ul>
             </nav>
         </aside>
 
-        <div class="corpo-principal">
+        <div style="width: 100%;">
             <!-- Cabeçalho -->
             <header>
                 <div class="caixa-cabecalho">
                     <h1>Tela padrão</h1> <!-- Altere aqui para a sua respectiva tela -->
                     <div class="info-usuario">
-                        <img src="/assets/icons/icone-avatar.svg" class="avatar" alt="Avatar">
+                        <img src="../assets/icons/icone-avatar.svg" class="avatar" alt="Avatar">
                         <div class="detalhes-usuario">
                             <p>Lorem Ipsum Dolo</p>
                             <small>Admin</small>
@@ -69,9 +65,8 @@
 
             <!-- Conteúdo Principal -->
             <main class="conteudo">
-
+                
                 <!-- ESCREVA SEU CÓDIGO AQUI -->
-                ${content}
 
             </main>
         </div>
@@ -85,4 +80,5 @@
     </script>
 
 </body>
+
 </html>
