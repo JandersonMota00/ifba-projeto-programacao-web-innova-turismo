@@ -25,11 +25,4 @@ public class Usuario extends Pessoa {
     @OneToMany(mappedBy = "usuario", cascade=CascadeType.ALL, orphanRemoval = true)
     private List<Telefone> telefones;
 
-    /*
-    @Override
-    public String obterDescricao() {
-        return String.format("ID: %d, Usuário: %s, Email: %s, Ativo: %s",
-                this.getIdUsuario(), super.getNome(), super.getEmail(), this.getAtivo() ? "Ativo" : "Inativo");
-    }
-    */
 }

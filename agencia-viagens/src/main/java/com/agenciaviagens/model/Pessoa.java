@@ -23,19 +23,4 @@ public abstract class Pessoa {
     @Column(name = "email", unique = true)
     private String email;
 
-    /*
-    public Pessoa(String nome, String email) {
-        this.nome = nome;
-        this.email = email;
-    }
-    */
-
-    /*
-    public abstract String obterDescricao();
-
-    @Override
-    public String toString() {
-        return String.format("Nome: %s, Email: %s", nome, email);
-    }
-    */
 }

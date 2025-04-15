@@ -31,11 +31,4 @@ public class Telefone {
     @JoinColumn(name = "id_usuario", nullable = false)
     private Usuario usuario;
 
-    /*
-    public Telefone(String numero, String tipo, Usuario usuario) {
-        this.numero = numero;
-        this.tipo = tipo;
-        this.usuario = usuario;
-    }
-    */
 }

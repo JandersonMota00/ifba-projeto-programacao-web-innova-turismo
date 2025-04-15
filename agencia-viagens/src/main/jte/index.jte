@@ -1,17 +1,21 @@
-@param java.util.List<String> items
+@import gg.jte.Content
+@import com.agenciaviagens.dto.Page
+<!--@param java.util.List<String> items -->
 
-@template.layout.main(content = @`
+@template.layout.main(
+    content = @``,
+    page = new Page("Página Inicial")
+)
 
-`)
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Olá, ${nome}!</h1>
-</body>
-</html>
+<!--
+@template.layout.main(
+    content = @`
+        <h2>Lista de itens</h2>
+        <ul>
+            @for(var item : items)
+                <li>${item}</li>
+            @endfor
+        </ul>`
+    , page = new Page("Página Inicial")
+)
+-->
