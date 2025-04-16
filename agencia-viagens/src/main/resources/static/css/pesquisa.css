@@ -40,6 +40,10 @@
     cursor: pointer;
 }
 
+.ancora-add-butao {
+    text-decoration: none;
+}
+
 .add-butao {
     background-color: var(--cor-primaria);
     color: var(--cor-secundaria);

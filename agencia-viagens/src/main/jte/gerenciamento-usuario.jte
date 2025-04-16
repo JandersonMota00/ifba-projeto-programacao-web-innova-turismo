@@ -17,7 +17,7 @@ content = @`
                     onkeydown="if(event.key === 'Enter'){ this.form.submit(); }">
             </div>
         </form>
-        <a href="/usuario/cadastro" style="text-decoration: none;"><button class="add-butao">+</button></a>
+        <a class="ancora-add-butao" href="/usuario/cadastro"><button class="add-butao">+</button></a>
     </section>
 
     <section class="cartoes-usuario">
@@ -32,7 +32,7 @@ content = @`
 
                 <button class="edita">Editar</button>
                 <button class="deleta">Deletar</button>
-                <button class="ativo">Ativar</button>
+                <button class="ativo">Ativado</button>
             </div>
         </div>
         <div class="cartao">
@@ -46,7 +46,7 @@ content = @`
 
                 <button class="edita">Editar</button>
                 <button class="deleta">Deletar</button>
-                <button class="ativo">Ativar</button>
+                <button class="ativo">Ativado</button>
             </div>
         </div>
         <div class="cartao">
@@ -60,7 +60,7 @@ content = @`
 
                 <button class="edita">Editar</button>
                 <button class="deleta">Deletar</button>
-                <button class="ativo">Ativar</button>
+                <button class="ativo">Ativado</button>
             </div>
         </div>
         <div class="cartao">
@@ -74,7 +74,7 @@ content = @`
 
                 <button class="edita">Editar</button>
                 <button class="deleta">Deletar</button>
-                <button class="ativo">Ativar</button>
+                <button class="ativo">Ativado</button>
             </div>
         </div>
     </section>
