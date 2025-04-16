@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/cadastro.css">
-    <title>${page == null ? "Página inicial" : page.title()}</title>
+    <title>${page == null ? "Início" : page.title()}</title>
     <style>
         @media (max-width: 540px) {
             .menu-hamburger {
@@ -45,7 +45,7 @@
                     </li>
                     <li><a href="#"><img src="/assets/icons/icone-dos-pacotes-de-viagens.svg" class="icone">Pacote</a>
                     </li>
-                    <li><a href="#"><img src="/assets/icons/icone-dos-funcionarios.svg" class="icone">Funcionários</a>
+                    <li><a href="/exibir-usuario/buscar"><img src="/assets/icons/icone-dos-funcionarios.svg" class="icone">Funcionários</a>
                     </li>
                     <li><a href="#"><img src="/assets/icons/icone-dos-clientes.svg" class="icone">Clientes</a></li>
                 </ul>
@@ -56,7 +56,7 @@
             <!-- Cabeçalho -->
             <header>
                 <div class="caixa-cabecalho">
-                    <h1>Tela padrão</h1> <!-- Altere aqui para a sua respectiva tela -->
+                    <h1>${page == null ? "Página inicial" : page.title()}</h1> <!-- Altere aqui para a sua respectiva tela -->
                     <div class="info-usuario">
                         <img src="/assets/icons/icone-avatar.svg" class="avatar" alt="Avatar">
                         <div class="detalhes-usuario">
