@@ -33,4 +33,25 @@ public class HospedagemController {
             return "redirect:/hospedagens/form?error";
         }
     }
+
+    // NOVO MÉTODO PARA LISTAR HOSPEDAGENS
+    @GetMapping
+    public String listarHospedagens(Model model) {
+        model.addAttribute("hospedagens", hospedagemService.listarTodas());
+        return "exibicao-hospedagem";
+    }
+
+    // MÉTODOS ADICIONAIS RECOMENDADOS
+    @GetMapping("/editar/{id}")
+    public String mostrarFormEdicao(@PathVariable Long id, Model model) {
+        Hospedagem hospedagem = hospedagemService.buscarPorId(id);
+        model.addAttribute("hospedagem", hospedagem);
+        return "hospedagem/formulario";
+    }
+
+    @PostMapping("/excluir/{id}")
+    public String excluirHospedagem(@PathVariable Long id) {
+        hospedagemService.excluirHospedagem(id);
+        return "redirect:/hospedagens?deleteSuccess";
+    }
 }

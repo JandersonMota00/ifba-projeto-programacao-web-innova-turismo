@@ -31,5 +31,12 @@ public class HospedagemService {
         return hospedagemRepository.findAll();
     }
 
-    // Outros métodos conforme necessário
+    public Hospedagem buscarPorId(Long id) {
+        return hospedagemRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Hospedagem não encontrada"));
+    }
+
+    public void excluirHospedagem(Long id) {
+        hospedagemRepository.deleteById(id);
+    }
 }
