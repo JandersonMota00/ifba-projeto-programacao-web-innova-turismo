@@ -13,30 +13,18 @@ import java.util.List;
 public class HospedagemService {
 
     @Autowired
-    private HospedagemRepository hospedagemRepository;
+    private HospedagemRepository repository;
 
     public Hospedagem salvarHospedagem(Hospedagem hospedagem, MultipartFile foto) throws IOException {
         if (foto != null && !foto.isEmpty()) {
             hospedagem.setFoto(foto.getBytes());
         }
 
+        // Garante a relação bidirecional
         if (hospedagem.getTelefones() != null) {
-            hospedagem.getTelefones().forEach(telefone -> telefone.setHospedagem(hospedagem));
+            hospedagem.getTelefones().forEach(t -> t.setHospedagem(hospedagem));
         }
 
-        return hospedagemRepository.save(hospedagem);
-    }
-
-    public List<Hospedagem> listarTodas() {
-        return hospedagemRepository.findAll();
-    }
-
-    public Hospedagem buscarPorId(Long id) {
-        return hospedagemRepository.findById(id)
-                .orElseThrow(() -> new EntityNotFoundException("Hospedagem não encontrada"));
-    }
-
-    public void excluirHospedagem(Long id) {
-        hospedagemRepository.deleteById(id);
+        return repository.save(hospedagem);
     }
 }
