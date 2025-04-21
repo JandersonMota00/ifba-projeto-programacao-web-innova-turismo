@@ -31,6 +31,42 @@
   </tr>
 </table>
 
+## 🚀 Docker
+📥 Download da imagem
+
+Baixe a imagem Docker do projeto:
+
+🔗 https://drive.google.com/file/d/1621PRXMf38JxzXbjXWX5NvnE78q8tc1y/view?usp=drive_link
+
+### 💻 Pré-requisitos
+> Se você estiver usando o Windows 11/10 Home, será necessário habilitar o WSL2 (Subsistema do Windows para Linux). Usuários do Windows Pro podem pular para a etapa de instalação do Docker.
+✅ Habilitar WSL2 (somente para Windows Home)
+
+1. Abra o PowerShell como Administrador e execute:
+  ``` powershell
+  wsl --install
+  ```
+
+2. Defina o WSL2 como padrão:
+  ``` powershell
+  wsl --set-default-version 2
+  ```
+
+### 🐳 Instalar o Docker Desktop
+
+Baixe e instale o Docker Desktop:
+
+🔗 https://www.docker.com/products/docker-desktop/
+
+> Após a instalação, abra o Docker Desktop e aguarde até que ele esteja em execução (Docker is running).
+### 📦 Importar a imagem Docker
+
+Após baixar o arquivo .tar, execute o seguinte comando no terminal:
+  ``` powershell
+  docker load -i agencia-viagens-image.tar
+  ```
+> Isso carregará a imagem do projeto no seu Docker local.
+
 ## Descrição do projeto
 A In Nova Turismo é uma agência de viagens especializada em oferecer pacotes de turismo personalizados para destinos nacionais e internacionais. Este projeto tem como objetivo desenvolver um sistema web completo que permitirá à empresa gerenciar suas operações e oferecer uma experiência de compra online para seus clientes.
 
