@@ -1,0 +1,50 @@
+package com.agenciaviagens.controller;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import com.agenciaviagens.model.Viagem;
+import jakarta.validation.Valid;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/viagens")    /*Cadastro de viagens */
+public class ViagemController {
+
+private final ViagemService viagemService;
+    
+
+public ViagemController(ViagemService viagemService) {
+    this.viagemService = viagemService;
+}
+
+  @PostMapping
+    public ResponseEntity<Viagem> criar(@RequestBody Viagem viagem) {
+        return ResponseEntity.ok(viagemService.salvarViagem(viagem));
+    }
+   
+    @GetMapping
+    public ResponseEntity<List<Viagem>> listar() {
+        return ResponseEntity.ok(viagemService.listarTodas());
+    }
+
+    @GetMapping("/{id}")
+     public ResponseEntity<Viagem> buscar(@PathVariable Long id) {
+    return viagemService.buscarPorId(id)
+        .map(ResponseEntity::ok)
+        .orElse(ResponseEntity.notFound().build());
+}
+   @DeleteMapping("/{id}")
+public ResponseEntity<Void> deletar(@PathVariable Long id) {
+    viagemService.deletar(id);
+    return ResponseEntity.noContent().build();
+}
+
+
+}
