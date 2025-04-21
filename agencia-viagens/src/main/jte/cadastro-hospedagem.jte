@@ -1,4 +1,6 @@
-@template.layout.main(content = @`
+@template.layout.main(
+page = new Page("Cadastro de Hospedagens"),
+content = @`
     <section class="formulario-conteiner">
         <!-- Área para Foto Expandida -->
         <div class="envio-de-foto">
