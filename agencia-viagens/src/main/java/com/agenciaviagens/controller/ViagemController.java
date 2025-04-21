@@ -27,12 +27,12 @@ public ViagemController(ViagemService viagemService) {
     this.viagemService = viagemService;
 }
 
-  @PostMapping
+  @PostMapping("/cadastrar")  /*Cadastrar viagens */
     public ResponseEntity<Viagem> criar(@RequestBody Viagem viagem) {
         return ResponseEntity.ok(viagemService.salvarViagem(viagem));
     }
    
-    @GetMapping
+    @GetMapping("/buscar")
     public ResponseEntity<List<Viagem>> listar() {
         return ResponseEntity.ok(viagemService.listarTodas());
     }
