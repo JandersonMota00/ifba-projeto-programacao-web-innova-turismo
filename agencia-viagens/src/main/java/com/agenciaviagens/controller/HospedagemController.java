@@ -9,10 +9,9 @@ public class HospedagemController {
 
     @GetMapping("/form")
     public String mostrarFormulario() {
-        return "cadastro-hospedagem";
+        return "cadastro-hospedagem.jte";
     }
 
-    /*
     @PostMapping("/salvar")
     public String salvarHospedagem(
             @ModelAttribute Hospedagem hospedagem,
@@ -25,5 +24,4 @@ public class HospedagemController {
             return "redirect:/hospedagens/form?error";
         }
     }
-    */
 }
