@@ -1,43 +1,44 @@
 
 /* Formulário */
 .formulario-conteiner {   /*CAIXA LILÁS COM INPUTS */
-    display: block;
-    width: 100%;
-    margin-top: 7.5vh;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 2rem;
+    width: 60%; /* ou até 55%, ajuste conforme visual */
+    background-color: #354D9B;
+    padding: 2em;
+    border-radius: 15px;
 }
 
 .caixa-conteudo {
     display: flex;
-    width: 60%; /*80*/
+    width: 80%; /*80*/
     /*flex-wrap: wrap;*/
     gap: 2em;
+    margin: 0 auto;
+    justify-content: center;
+
 }
 
 /* Upload de Foto */
 .envio-de-foto {
-    margin-top: 7.5vh;  /*7.5vh*/
-    margin-bottom: 7.5vh;
-    width: 40%; /*100%*/
-    height: 35vh; /*35vh*/
+    width: 250px; /* ou: width: 30%; */
+    height: 35vh;
     background: #B4C5FF;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2vw;
+    font-size: 1rem;
     color: #555;
     border-radius: 10px;
     border: 0.3rem solid #87A2FF;
     position: relative;
     text-align: center;
+    
 }
 
 .btn-salvar {
     width: 10rem; /*15*/
     padding: 0.7rem; /*1.2rem*/
-    margin-right: 29.5rem; /*posicionar o botao*/
+    text-align:center;
+    /* margin-right: 29.5rem; /*posicionar o botao 29.5rem*/
    
 }
 
