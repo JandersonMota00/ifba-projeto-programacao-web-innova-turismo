@@ -67,3 +67,17 @@
     left: 0;
     border-radius: 10px;
 }
+
+/* Faz a descrição ocupar mais espaço */
+.descricao-maior {
+    flex: 2; /* enquanto os outros inputs ficam com flex: 1 padrão */
+}
+
+/* Ajusta os labels */
+.caixa-input label {
+    display: block;
+    margin-bottom: 0.3rem;
+    color: white; /* ou outra cor que combine */
+    font-size: 0.9rem;
+}
+
