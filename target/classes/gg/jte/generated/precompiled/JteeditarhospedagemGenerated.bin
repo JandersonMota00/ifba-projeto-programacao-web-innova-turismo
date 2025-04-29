@@ -1,0 +1,50 @@
+
+
+
+
+
+    <section class="formulario-conteiner">
+        <form action="/hospedagens/editar/" method="post" class="formulario">
+            <fieldset>
+                <legend>Dados da Hospedagem</legend>
+                <div class="grid">
+                    <div class="campo">
+                        <label for="nome">Nome *</label>
+                        <input type="text" id="nome" name="nome" value="" required>
+                    </div>
+                    <div class="campo">
+                        <label for="telefone1">Telefone 1 *</label>
+                        <input type="text" id="telefone1" name="telefone1" value="" required>
+                    </div>
+                </div>
+                <div class="grid">
+                    <div class="campo">
+                        <label for="telefone2">Telefone 2 (opcional)</label>
+                        <input type="text" id="telefone2" name="telefone2" value="">
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Endereço da Hospedagem</legend>
+                <div class="grid">
+                    <div class="campo">
+                        <label for="logradouro">Logradouro *</label>
+                        <input type="text" id="logradouro" name="logradouro" value="" required>
+                    </div>
+                    <div class="campo">
+                        <label for="numero">Número *</label>
+                        <input type="text" id="numero" name="numero" value="" required>
+                    </div>
+                </div>
+                <div class="grid">
+                    <div class="campo">
+                        <label for="cidade">Cidade *</label>
+                        <input type="text" id="cidade" name="cidade" value="" required>
+                    </div>
+                </div>
+            </fieldset>
+
+            <button type="submit" class="btn-salvar"><i class='bx bxs-save'></i> Salvar Alterações</button>
+        </form>
+    </section>

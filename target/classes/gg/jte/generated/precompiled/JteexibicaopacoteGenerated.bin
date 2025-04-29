@@ -1,0 +1,46 @@
+
+
+
+<section class="secao-pesquisa">
+    <a href="/pacotes/novo" class="btn-cadastro">
+                <i class='bx bx-plus'></i>
+                <span class="texto">Cadastrar Novo</span>
+            </a>
+</section>
+
+<section class="cards-section">
+    
+        
+            <article class="card">
+                <div class="img-viagem">
+                    <i class='bx bxs-plane' ></i>
+                </div>
+                <div class="descricao">
+                    <h2></h2>
+                    <p></p>
+                </div>
+                <div class="dados-viagem">
+                    <h3>Data de ida: </h3>
+                    <h3>Data de volta: </h3>
+                </div>
+                <div class="botoes">
+                    <a href="/pacotes/edit/">
+                        <button class="botao-editar">
+                            
+                            <i class='bx bxs-edit-alt' style="color: var(--light);"></i>
+                            Editar
+                        </button>
+                    </a>
+                    <a href="/pacotes/remover/">
+                        <button class="botao-deletar">
+                           
+                            <i class='bx bx-x' style="color: var(--light);"></i>
+                            Deletar
+                        </button>
+                    </a>
+                    
+                </div>
+            </article>
+        
+    
+</section>

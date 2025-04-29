@@ -1,0 +1,40 @@
+
+
+    
+
+    <div class="formulario-container">
+        
+        <section class="secao-pesquisa">
+            <a href="/user/cadastro" class="btn-cadastro">
+                <i class='bx bx-plus'></i>
+                <span class="texto">Cadastrar Novo</span>
+            </a>
+        </section>
+
+        
+        <section class="cartoes-usuario">
+            
+                
+                    <article class="cartao">
+                        <div class="foto">
+                            <i class='bx bxs-user-badge'></i>
+                        </div>
+                        <div class="cartao-corpo">
+                            <div class="descricao">
+                                <h2></h2>
+                                <p></p>
+                            </div>
+                            <div class="botoes">
+                                <a href="/user/edit/" class="btn-editar">
+                                    <i class='bx bxs-edit-alt'></i> Editar
+                                </a>
+                                <a href="/user/remover/" class="btn-deletar">
+                                    <i class='bx bxs-trash'></i> Deletar
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                
+            
+        </section>
+    </div>

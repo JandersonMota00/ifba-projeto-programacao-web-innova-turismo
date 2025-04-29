@@ -1,0 +1,67 @@
+
+
+<div style="background-color: red">
+    <ul>
+        
+        <li></li>
+        
+    </ul>
+</div>
+
+
+
+    
+
+    <section class="formulario-container">
+        
+        <form action="" method="post">
+            <div class="campos-formulario">
+                <fieldset>
+                    <legend>Informações do Pacote</legend>
+
+                    <input type="hidden" name="idPacote" value="">
+                    <div class="caixa lado-a-lado">
+                        <div class="caixa-input">
+                            <input type="text" placeholder="Título *" name="titulo" value="" required>
+                        </div>
+                        <div class="caixa-input">
+                            <input type="text" placeholder="Descrição *" name="descricao" value="" required>
+                        </div>
+                        <div class="caixa-input">
+                            <input type="text" data-type="date" placeholder="Data de Partida *" name="dataPartida" value="" required>
+                        </div>
+                        <div class="caixa-input">
+                            <input type="text" data-type="date" placeholder="Data de Chegada *" name="dataChegada" value="" required>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Detalhes do Pacote</legend>
+                    <div class="caixa lado-a-lado">
+                        <div class="caixa-input">
+                            <input type="text" placeholder="Estado" name="estado" value="">
+                        </div>
+                        <div class="caixa-input">
+                            <input type="text" placeholder="Hospedagem" name="hospedagem" value="">
+                        </div>
+                        <div class="caixa-input">
+                            <input type="text" placeholder="Passeios" name="passeios" value="">
+                        </div>
+                        <div class="caixa-input">
+                            <input type="text" placeholder="Translado" name="translado" value="">
+                        </div>
+                        <div class="caixa-input">
+                            <input type="text" placeholder="Valor" name="valor" value="">
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+
+            <button class="btn-salvar">
+                <i class='bx bxs-save'></i> Salvar
+            </button>
+        </form>
+    </section>
+
+    

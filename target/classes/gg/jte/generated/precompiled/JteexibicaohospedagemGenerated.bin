@@ -1,0 +1,39 @@
+
+
+    
+
+    <section class="secao-pesquisa">
+        <a href="/hospedagens/cadastro" class="btn-cadastro">
+            <i class='bx bx-plus'></i>
+            <span class="texto">Cadastrar Novo</span>
+        </a>
+    </section>
+
+    <section class="cartoes-hospedagem">
+        
+            
+                <article class="cartao">
+                    <div class="foto">
+                        <i class='bx bxs-buildings'></i>
+                    </div>
+                    <div class="cartao-corpo">
+                        <div class="descricao">
+                            <h2></h2>
+                            <p>Telefone 1: </p>
+                            <p>Telefone 2: </p>
+                            <p>Endereço: ,  - </p>
+                        </div>
+                        <div class="botoes">
+                            <a href="/hospedagens/editar/" class="btn-editar">
+                                <i class='bx bxs-edit-alt'></i> Editar
+                            </a>
+                            <a href="/hospedagens/deletar/" class="btn-deletar">
+                                <i class='bx bxs-trash'></i> Deletar
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            
+        
+    </section>
+
